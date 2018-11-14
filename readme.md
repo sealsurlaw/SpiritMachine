@@ -17,6 +17,6 @@ Nice to Have:
   Which alcohol is in each machine
   
   Wire Diagram
-  [[https://github.com/sealsurlaw/SpiritMachine/blob/master/SpiritWire.png|alt=SpiritMachineWireDiagram]]
+  !["Spirit Machine Wire Diagram"](https://github.com/sealsurlaw/SpiritMachine/blob/master/SpiritWire.png?raw=true)
 
  
