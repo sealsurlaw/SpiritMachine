@@ -2,21 +2,25 @@
 Technician App for Spirit Machine
 
 Must Haves:
-  Notifications of low alcohol levels
-  List of machines
-  Machine details
-  Server backend api
+  Notifications of low alcohol levels - 6 hours - Juan
+  List of machines - 2 hours - Juan
+  Machine details - 2 hour - Juan
+  Server backend API - 24 hours - Dylan
   
 Nice to Have:
-  Signup
-  Login
-  Machine registration
-  Fancy graphics
-  Account management
-  Machine management
-  Which alcohol is in each machine
+  Signup - 5 hours - Dylan
+  Login - 10 hours - Juan
+  Machine registration - 4 hours - Dylan
+  Fancy graphics - 10 hours - Dylan
+  Account management - 10 hours - Juan
+  Machine management - 5 hours - Juan
+  Which alcohol is in each machine - 2 hours - Juan
   
-  Wire Diagram
+  Juan - 37
+  Dylan - 43
+  
+Wire Diagram
   !["Spirit Machine Wire Diagram"](https://github.com/sealsurlaw/SpiritMachine/blob/master/SpiritWire.png?raw=true)
+  
 
  
