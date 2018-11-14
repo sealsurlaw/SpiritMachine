@@ -1,5 +1,6 @@
 # SpiritMachine
 Technician App for Spirit Machine
+App will work in conjunction to Dylan's Engineering Senior Design Project. The Spirit Machine is an alcohol vending machine that mixes cocktails for bar patrons. This app will be used by the bar's management to check on the status of its Spirit's machines. Its functionalities will be including (but not limited to) account/machine management, see machine details, get alerts (notifications) when an liquor/liquid is low.
 
 Must Haves:
   Notifications of low alcohol levels - 6 hours - Juan
