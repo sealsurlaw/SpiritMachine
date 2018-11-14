@@ -18,6 +18,7 @@ App will work in conjunction to Dylan's Engineering Senior Design Project. The S
 - Machine management - *5 hours* - **Juan**
 - Which alcohol is in each machine - *2 hours* - **Juan**
   
+Total hours
 - **Juan** - *37 hours*
 - **Dylan** - *43 hours*
   
