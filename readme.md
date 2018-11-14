@@ -15,4 +15,8 @@ Nice to Have:
   Account management
   Machine management
   Which alcohol is in each machine
+  
+  Wire Diagram
+  [[https://github.com/sealsurlaw/SpiritMachine/SpiritWire.png|alt=Spirit Machine Wire Diagram]]
+
  
