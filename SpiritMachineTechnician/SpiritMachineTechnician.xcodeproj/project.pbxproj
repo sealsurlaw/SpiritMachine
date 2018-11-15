@@ -47,6 +47,7 @@
 		C00C8905219CF3BC0071E39D /* SpiritMachineTechnicianUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpiritMachineTechnicianUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00C8909219CF3BC0071E39D /* SpiritMachineTechnicianUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiritMachineTechnicianUITests.swift; sourceTree = "<group>"; };
 		C00C890B219CF3BC0071E39D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C00C8917219CF4F40071E39D /* SpiritMachineTechnician.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpiritMachineTechnician.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 		C00C88E8219CF3B90071E39D /* SpiritMachineTechnician */ = {
 			isa = PBXGroup;
 			children = (
+				C00C8917219CF4F40071E39D /* SpiritMachineTechnician.entitlements */,
 				C00C88E9219CF3B90071E39D /* AppDelegate.swift */,
 				C00C88EB219CF3B90071E39D /* ViewController.swift */,
 				C00C88ED219CF3B90071E39D /* Main.storyboard */,
@@ -193,6 +195,11 @@
 				TargetAttributes = {
 					C00C88E5219CF3B90071E39D = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					C00C88F9219CF3BC0071E39D = {
 						CreatedOnToolsVersion = 10.1;
@@ -432,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SpiritMachineTechnician/SpiritMachineTechnician.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2X829ERV72;
 				INFOPLIST_FILE = SpiritMachineTechnician/Info.plist;
@@ -450,6 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SpiritMachineTechnician/SpiritMachineTechnician.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2X829ERV72;
 				INFOPLIST_FILE = SpiritMachineTechnician/Info.plist;
