@@ -570,7 +570,7 @@
 				C00C890D219CF3BC0071E39D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		C00C890E219CF3BC0071E39D /* Build configuration list for PBXNativeTarget "SpiritMachineTechnician" */ = {
 			isa = XCConfigurationList;
@@ -579,7 +579,7 @@
 				C00C8910219CF3BC0071E39D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		C00C8911219CF3BC0071E39D /* Build configuration list for PBXNativeTarget "SpiritMachineTechnicianTests" */ = {
 			isa = XCConfigurationList;
@@ -588,7 +588,7 @@
 				C00C8913219CF3BC0071E39D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		C00C8914219CF3BC0071E39D /* Build configuration list for PBXNativeTarget "SpiritMachineTechnicianUITests" */ = {
 			isa = XCConfigurationList;
@@ -597,7 +597,7 @@
 				C00C8916219CF3BC0071E39D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
