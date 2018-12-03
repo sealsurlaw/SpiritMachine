@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		574B154521AF673A007EE782 /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574B154421AF673A007EE782 /* Machine.swift */; };
+		574B154721AF6D5B007EE782 /* Alcohol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574B154621AF6D5B007EE782 /* Alcohol.swift */; };
+		57D0BF9821B5A7B900665A16 /* MachineDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0BF9721B5A7B900665A16 /* MachineDetailTableViewController.swift */; };
 		C0A03C7121AF60CC00AAA32A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03C7021AF60CC00AAA32A /* AppDelegate.swift */; };
-		C0A03C7321AF60CC00AAA32A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03C7221AF60CC00AAA32A /* ViewController.swift */; };
+		C0A03C7321AF60CC00AAA32A /* MachineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03C7221AF60CC00AAA32A /* MachineTableViewController.swift */; };
 		C0A03C7621AF60CC00AAA32A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A03C7421AF60CC00AAA32A /* Main.storyboard */; };
 		C0A03C7821AF60CF00AAA32A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0A03C7721AF60CF00AAA32A /* Assets.xcassets */; };
 		C0A03C7B21AF60CF00AAA32A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A03C7921AF60CF00AAA32A /* LaunchScreen.storyboard */; };
@@ -34,9 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		574B154421AF673A007EE782 /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
+		574B154621AF6D5B007EE782 /* Alcohol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alcohol.swift; sourceTree = "<group>"; };
+		57D0BF9721B5A7B900665A16 /* MachineDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailTableViewController.swift; sourceTree = "<group>"; };
 		C0A03C6D21AF60CC00AAA32A /* SpiritMachineTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiritMachineTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A03C7021AF60CC00AAA32A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C0A03C7221AF60CC00AAA32A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C0A03C7221AF60CC00AAA32A /* MachineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineTableViewController.swift; sourceTree = "<group>"; };
 		C0A03C7521AF60CC00AAA32A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C0A03C7721AF60CF00AAA32A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0A03C7A21AF60CF00AAA32A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,11 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				C0A03C7021AF60CC00AAA32A /* AppDelegate.swift */,
-				C0A03C7221AF60CC00AAA32A /* ViewController.swift */,
+				C0A03C7221AF60CC00AAA32A /* MachineTableViewController.swift */,
+				57D0BF9721B5A7B900665A16 /* MachineDetailTableViewController.swift */,
 				C0A03C7421AF60CC00AAA32A /* Main.storyboard */,
 				C0A03C7721AF60CF00AAA32A /* Assets.xcassets */,
 				C0A03C7921AF60CF00AAA32A /* LaunchScreen.storyboard */,
 				C0A03C7C21AF60CF00AAA32A /* Info.plist */,
+				574B154421AF673A007EE782 /* Machine.swift */,
+				574B154621AF6D5B007EE782 /* Alcohol.swift */,
 			);
 			path = SpiritMachineTech;
 			sourceTree = "<group>";
@@ -256,8 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0A03C7321AF60CC00AAA32A /* ViewController.swift in Sources */,
+				57D0BF9821B5A7B900665A16 /* MachineDetailTableViewController.swift in Sources */,
+				C0A03C7321AF60CC00AAA32A /* MachineTableViewController.swift in Sources */,
 				C0A03C7121AF60CC00AAA32A /* AppDelegate.swift in Sources */,
+				574B154721AF6D5B007EE782 /* Alcohol.swift in Sources */,
+				574B154521AF673A007EE782 /* Machine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
