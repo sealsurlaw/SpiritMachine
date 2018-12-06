@@ -1,5 +1,5 @@
 
 struct Alcohol {
-    var name:String
-    var full:Bool
+    var name: String
+    var full: Bool
 }

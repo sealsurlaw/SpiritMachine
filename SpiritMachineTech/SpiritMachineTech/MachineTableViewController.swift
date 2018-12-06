@@ -1,4 +1,7 @@
 import UIKit
+import Alamofire
+import ObjectMapper
+import AlamofireObjectMapper
 
 class MachineTableViewController: UITableViewController {
     
@@ -31,20 +34,7 @@ class MachineTableViewController: UITableViewController {
     
     var refresher: UIRefreshControl!
     
-    var machineList: [Machine] = [
-        Machine(name: "Machine Juan",
-                machineNumber: 1,
-                online: true,
-                listOfAlcohol: [Alcohol(name:"Scotch", full:true),
-                                Alcohol(name:"Soda", full:true),
-                                ]),
-        Machine(name: "Machine stoopid Duhlan",
-                machineNumber: 2,
-                online: false,
-                listOfAlcohol: [Alcohol(name:"Vodka", full:false),
-                                Alcohol(name:"Water", full:true),
-                                ]),
-    ]
+    var machineList: [Machine] = []
     
     var selectedMachine: Machine?
     
@@ -90,6 +80,11 @@ class MachineTableViewController: UITableViewController {
         self.title = "Machine List"
         // Do any additional setup after loading the view, typically from a nib.
         
+        Machine.getMachineData(callback: { (_ machineArray: [Machine]) -> () in
+            self.machineList = machineArray
+            self.tableView.reloadData()
+        })
+        
         refresher = UIRefreshControl()
         tableView.addSubview(refresher)
         refresher.addTarget(self, action: #selector(updateMachineList), for: .valueChanged)
@@ -98,11 +93,14 @@ class MachineTableViewController: UITableViewController {
     
     
     @objc func updateMachineList(){
-        //.getMachineData is static func in Machine class that pulls data.
-        var updatedMachineList: [Machine] = Machine.getMachineData()
-        machineList.append(contentsOf: updatedMachineList)
-        tableView.reloadData()
-        refresher.endRefreshing()
+
+        Machine.getMachineData(callback: { (_ machineArray: [Machine]) -> () in
+            self.machineList = machineArray
+            
+            self.tableView.reloadData()
+            self.refresher.endRefreshing()
+        })
+
     }
 }
 
