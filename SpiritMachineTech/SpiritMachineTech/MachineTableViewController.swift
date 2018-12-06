@@ -9,6 +9,28 @@ class MachineTableViewController: UITableViewController {
     */
     
     //test variables
+    
+    /*
+     
+     
+     // REST API URI
+     /tokens/XXXTOKENXXXXX/machines/######
+     
+     // For data from specific machine
+     func getDataFromServer(token: String, machine: String) -> Machine
+     
+     // For data from all machines associated with user token
+     func getDataFromServer(token: String) -> [Machine]
+     
+     // For user data
+     func getUserDataFromServer(token: String) -> User
+     
+     
+     
+     */
+    
+    var refresher: UIRefreshControl!
+    
     var machineList: [Machine] = [
         Machine(name: "Machine Juan",
                 machineNumber: 1,
@@ -62,10 +84,25 @@ class MachineTableViewController: UITableViewController {
             destination.machine = selectedMachine
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Machine List"
         // Do any additional setup after loading the view, typically from a nib.
+        
+        refresher = UIRefreshControl()
+        tableView.addSubview(refresher)
+        refresher.addTarget(self, action: #selector(updateMachineList), for: .valueChanged)
+    }
+    
+    
+    
+    @objc func updateMachineList(){
+        //.getMachineData is static func in Machine class that pulls data.
+        var updatedMachineList: [Machine] = Machine.getMachineData()
+        machineList.append(contentsOf: updatedMachineList)
+        tableView.reloadData()
+        refresher.endRefreshing()
     }
 }
 

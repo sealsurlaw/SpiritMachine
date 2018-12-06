@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RdX-TG-f3S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3ZD-if-fYo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,21 +10,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Account View Controller-->
         <scene sceneID="P3P-bX-a5T">
             <objects>
-                <viewController id="cNR-dX-MfH" sceneMemberID="viewController">
+                <viewController id="cNR-dX-MfH" customClass="AccountViewController" customModule="SpiritMachineTech" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DBw-4e-zSU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udc-eq-M9C">
+                                <rect key="frame" x="163" y="548" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="cNR-dX-MfH" eventType="touchUpInside" id="DX0-BA-Frc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="udc-eq-M9C" secondAttribute="bottom" constant="40" id="YPc-CG-Kd7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ugr-0y-aPz"/>
                     </view>
                     <navigationItem key="navigationItem" id="40B-ra-Ohm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MNr-s8-QAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-660" y="778.56071964017997"/>
+            <point key="canvasLocation" x="182" y="779"/>
         </scene>
         <!--Machine Table View Controller-->
         <scene sceneID="o8P-wS-Xeq">
@@ -54,13 +66,7 @@
                             <outlet property="delegate" destination="aFu-9o-Qcw" id="zsV-Yt-4Dc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="81T-CB-uPC">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Re4-F7-94d">
-                            <connections>
-                                <action selector="addMachine:" destination="aFu-9o-Qcw" id="NhA-eZ-RHu"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="81T-CB-uPC"/>
                     <connections>
                         <segue destination="ooC-DC-JlW" kind="show" identifier="machineDetailTransition" id="gnY-mR-4aE"/>
                     </connections>
@@ -69,14 +75,58 @@
             </objects>
             <point key="canvasLocation" x="182" y="6"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Login View Controller-->
+        <scene sceneID="9Hv-dA-8fg">
+            <objects>
+                <viewController storyboardIdentifier="loginvc" id="3ZD-if-fYo" customClass="LoginViewController" customModule="SpiritMachineTech" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s1S-yB-nex">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nMZ-gg-Wge">
+                                <rect key="frame" x="87" y="245" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbe-34-ZZR">
+                                <rect key="frame" x="168" y="329" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButton:" destination="3ZD-if-fYo" eventType="touchUpInside" id="q4o-Ow-BGK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ehk-nT-z7V">
+                                <rect key="frame" x="87" y="283" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="J2e-Em-njQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="nMZ-gg-Wge" id="Vq9-ty-Jct"/>
+                        <outlet property="password" destination="Ehk-nT-z7V" id="977-hG-8Ma"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qn6-XW-BE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2485.5999999999999" y="381.85907046476763"/>
+        </scene>
+        <!--Tab Bar View Controller-->
         <scene sceneID="XDY-w1-j8x">
             <objects>
-                <tabBarController id="RdX-TG-f3S" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbarvc" id="RdX-TG-f3S" customClass="TabBarViewController" customModule="SpiritMachineTech" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Duo-g2-86X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="aNW-Ke-evB" kind="relationship" relationship="viewControllers" id="thF-TH-iOy"/>
@@ -85,13 +135,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O7S-Hm-537" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1598" y="6"/>
+            <point key="canvasLocation" x="-1454" y="386"/>
         </scene>
-        <!--Item 1-->
+        <!--Machines-->
         <scene sceneID="b4f-yQ-OD1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aNW-Ke-evB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="fAJ-4Y-HX7"/>
+                    <tabBarItem key="tabBarItem" title="Machines" id="fAJ-4Y-HX7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bUX-lp-YQy">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -106,11 +156,11 @@
             </objects>
             <point key="canvasLocation" x="-671.20000000000005" y="5.8470764617691158"/>
         </scene>
-        <!--Item 2-->
+        <!--Account-->
         <scene sceneID="knB-Eg-WZR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FUW-en-fZK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="1uC-oX-9QI"/>
+                    <tabBarItem key="tabBarItem" title="Account" id="1uC-oX-9QI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O07-vx-PEB">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -123,7 +173,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Cg-JO-vgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1599.2" y="778.56071964017997"/>
+            <point key="canvasLocation" x="-671" y="779"/>
         </scene>
         <!--Machine Detail View Controller-->
         <scene sceneID="bn4-uc-D5b">
@@ -132,13 +182,41 @@
                     <view key="view" contentMode="scaleToFill" id="H9a-li-Qhy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Tg-8d-34R">
+                                <rect key="frame" x="16" y="139" width="343" height="271"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="alcoholCell" id="NcW-Na-AbO">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NcW-Na-AbO" id="0y2-Ni-mUH">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GI6-KF-mRV">
+                                <rect key="frame" x="101" y="81" width="172" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Rd8-os-JxO"/>
                     </view>
+                    <connections>
+                        <outlet property="alcoholTable" destination="1Tg-8d-34R" id="qTI-sw-gg3"/>
+                        <outlet property="status" destination="GI6-KF-mRV" id="m7P-2b-MJT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LdR-pa-Suo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="6"/>
+            <point key="canvasLocation" x="1029.5999999999999" y="5.8470764617691158"/>
         </scene>
     </scenes>
 </document>
