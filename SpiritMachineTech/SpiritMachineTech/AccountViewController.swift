@@ -12,7 +12,7 @@ class AccountViewController: UIViewController {
     
 
     @IBAction func logout(_ sender: Any) {
-        UserDefaults.standard.set(false, forKey: "status")
+        UserDefaults.standard.removeObject(forKey: "token")
         Switcher.updateRootVC()
     }
     

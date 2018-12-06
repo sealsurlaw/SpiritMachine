@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 
 class LoginViewController: UIViewController {
@@ -18,13 +19,28 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: Any) {
         
+        let parameters: Parameters = [
+            "email":    email.text!,
+            "password": password.text!
+        ]
         
-        
-        
-        
-        UserDefaults.standard.set(true, forKey: "status")
-        Switcher.updateRootVC()
-    }
+        Alamofire.request("https://spirit-machine.herokuapp.com/login", method: .post, parameters: parameters).responseJSON { response in
+            
+            if let _ = response.error {
+                let alert = UIAlertController(title: "Incorrect Email or Password", message: "Please provide a valid email and password to continue.", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+                
+                self.present(alert, animated: true)
+            }
+            
+            if let data = response.result.value {
+                UserDefaults.standard.set(data, forKey: "token")
+                Switcher.updateRootVC()
+            }
+            
+        }
+}
     
     var emailString: String {
         if let text = email.text {

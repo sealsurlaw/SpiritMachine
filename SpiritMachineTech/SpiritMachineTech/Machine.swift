@@ -27,7 +27,7 @@ struct Machine {
 extension Machine {
     static func getMachineData(callback: @escaping ([Machine]) -> () ) {
         
-        let URL = "https://spirit-machine.herokuapp.com/tokens/mytokenisjuan"
+        let URL = "https://spirit-machine.herokuapp.com/tokens/"+UserDefaults.standard.string(forKey: "token")!
         Alamofire.request(URL).responseObject { (response: DataResponse<MachineResponse>) in
             
             var machineArray: [Machine] = []

@@ -13,16 +13,14 @@ class Switcher {
     
     static func updateRootVC(){
         
-        let status = UserDefaults.standard.bool(forKey: "status")
-        var rootVC : UIViewController?
+        let status: String? = UserDefaults.standard.string(forKey: "token")
+        var rootVC: UIViewController?
         
-        print(status)
-        
-        
-        if(status == true){
-            rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarvc") as! TabBarViewController
-        }else{
+        if (status == nil) {
             rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginvc") as! LoginViewController
+        }
+        else {
+            rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarvc") as! TabBarViewController
         }
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
