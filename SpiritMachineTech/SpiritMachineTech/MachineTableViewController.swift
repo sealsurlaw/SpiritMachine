@@ -61,6 +61,7 @@ class MachineTableViewController: UITableViewController {
             cell.tintColor = UIColor.red
         }
         cell.accessoryType = taskCheckmark
+       // cell.backgroundColor = 
         return cell
     }
     
