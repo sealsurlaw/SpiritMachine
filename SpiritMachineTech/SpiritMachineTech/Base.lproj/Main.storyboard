@@ -20,7 +20,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udc-eq-M9C">
                                 <rect key="frame" x="163" y="548" width="49" height="30"/>
-                                <state key="normal" title="Logout"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="logout:" destination="cNR-dX-MfH" eventType="touchUpInside" id="DX0-BA-Frc"/>
                                 </connections>
@@ -242,11 +244,62 @@
                     <connections>
                         <outlet property="alcoholTable" destination="1Tg-8d-34R" id="qTI-sw-gg3"/>
                         <outlet property="status" destination="GI6-KF-mRV" id="m7P-2b-MJT"/>
+                        <segue destination="fco-ja-4BX" kind="show" identifier="alcoholDetailTransition" id="3yi-Z2-eJG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LdR-pa-Suo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1029.5999999999999" y="5.8470764617691158"/>
+        </scene>
+        <!--Alcohol Detail View Controller-->
+        <scene sceneID="IH3-jd-P3G">
+            <objects>
+                <viewController id="fco-ja-4BX" customClass="AlcoholDetailViewController" customModule="SpiritMachineTech" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zOj-e9-0XZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94Z-cT-dsQ">
+                                <rect key="frame" x="16" y="187" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="container" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5W-J9-xO6">
+                                <rect key="frame" x="16" y="144" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4m-yT-Ggo">
+                                <rect key="frame" x="162" y="100" width="51" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.43529411759999997" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="W4m-yT-Ggo" firstAttribute="centerX" secondItem="zOj-e9-0XZ" secondAttribute="centerX" id="04L-vC-1ks"/>
+                            <constraint firstItem="W4m-yT-Ggo" firstAttribute="top" secondItem="bxx-Uz-wx2" secondAttribute="top" constant="36" id="420-Nx-Vt7"/>
+                            <constraint firstItem="T5W-J9-xO6" firstAttribute="leading" secondItem="bxx-Uz-wx2" secondAttribute="leading" constant="16" id="UDb-Vq-eyj"/>
+                            <constraint firstItem="94Z-cT-dsQ" firstAttribute="leading" secondItem="bxx-Uz-wx2" secondAttribute="leading" constant="16" id="Uee-9d-Sm7"/>
+                            <constraint firstItem="94Z-cT-dsQ" firstAttribute="top" secondItem="T5W-J9-xO6" secondAttribute="bottom" constant="22" id="ncG-qp-MT7"/>
+                            <constraint firstItem="bxx-Uz-wx2" firstAttribute="trailing" secondItem="94Z-cT-dsQ" secondAttribute="trailing" constant="16" id="yCs-h8-Vha"/>
+                            <constraint firstItem="bxx-Uz-wx2" firstAttribute="trailing" secondItem="T5W-J9-xO6" secondAttribute="trailing" constant="16" id="yZH-Q4-6OJ"/>
+                            <constraint firstItem="T5W-J9-xO6" firstAttribute="top" secondItem="W4m-yT-Ggo" secondAttribute="bottom" constant="18" id="zJY-l2-odN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bxx-Uz-wx2"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerLabel" destination="T5W-J9-xO6" id="1mU-0W-8Tg"/>
+                        <outlet property="nameLabel" destination="W4m-yT-Ggo" id="2so-3V-wY1"/>
+                        <outlet property="timeLabel" destination="94Z-cT-dsQ" id="M1O-dV-alG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QjF-a8-tI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1888.8" y="5.8470764617691158"/>
         </scene>
     </scenes>
 </document>

@@ -3,6 +3,7 @@ import UIKit
 class MachineDetailViewController: UIViewController,UITableViewDataSource,  UITableViewDelegate{
     var machine:Machine?
     var list:[Alcohol] = []
+    var selectedAlcohol:Alcohol?
     
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var alcoholTable: UITableView!
@@ -32,9 +33,15 @@ class MachineDetailViewController: UIViewController,UITableViewDataSource,  UITa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //what to do when selected?????
+        selectedAlcohol = list[indexPath.row]
+        performSegue(withIdentifier: "alcoholDetailTransition", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? AlcoholDetailViewController {
+            destination.alcohol = selectedAlcohol
+        }
+    }
     override func viewDidLoad(){
         super.viewDidLoad()
         self.title = machine?.name

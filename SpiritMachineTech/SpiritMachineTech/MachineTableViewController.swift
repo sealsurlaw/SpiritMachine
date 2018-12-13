@@ -5,41 +5,10 @@ import AlamofireObjectMapper
 
 class MachineTableViewController: UITableViewController {
     
-    /*
-     Accessory Types:
-         checkmark: status of machine is good
-         info chevron: status alert! (make red)?
-    */
-    
-    //test variables
-    
-    /*
-     
-     
-     // REST API URI
-     /tokens/XXXTOKENXXXXX/machines/######
-     
-     // For data from specific machine
-     func getDataFromServer(token: String, machine: String) -> Machine
-     
-     // For data from all machines associated with user token
-     func getDataFromServer(token: String) -> [Machine]
-     
-     // For user data
-     func getUserDataFromServer(token: String) -> User
-     
-     
-     
-     */
-    
     var refresher: UIRefreshControl!
-    
     var machineList: [Machine] = []
-    
     var selectedMachine: Machine?
     
-    @IBAction func addMachine(_ sender: Any) {
-    }
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int
     {
@@ -61,7 +30,7 @@ class MachineTableViewController: UITableViewController {
             cell.tintColor = UIColor.red
         }
         cell.accessoryType = taskCheckmark
-       // cell.backgroundColor = 
+        
         return cell
     }
     
