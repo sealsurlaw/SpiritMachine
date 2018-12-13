@@ -41,7 +41,7 @@ extension Machine {
                     var currMachine: Machine = Machine(id: machine.id!)
                     
                     for alcohol in machine.alcohol! {
-                        currAlcohol = Alcohol(name: alcohol.type!, full: alcohol.full!)
+                        currAlcohol = Alcohol(name: alcohol.type!, full: alcohol.full!, time_empty: alcohol.date!, container: alcohol.cont!)
                         currMachine.listOfAlcohol.append(currAlcohol)
                     }
                     
