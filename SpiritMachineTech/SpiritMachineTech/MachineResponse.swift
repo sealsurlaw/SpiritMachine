@@ -29,7 +29,7 @@ class MachineJSON: Mappable {
 class AlcoholJSON: Mappable {
     var type: String?
     var full: Bool?
-    var date: String?
+    var date: Date?
     var cont: Int?
     
     required init?(map: Map){
@@ -37,9 +37,13 @@ class AlcoholJSON: Mappable {
     }
     
     func mapping(map: Map) {
-        type    <- map["type"]
-        full    <- map["full"]
-        date    <- map["empty_time"]
-        cont    <- map["container"]
+        var dateDouble: Double = 0.0
+        
+        type       <- map["type"]
+        full       <- map["full"]
+        dateDouble <- map["empty_time"]
+        cont       <- map["container"]
+        
+        date = Date(timeIntervalSince1970: dateDouble)
     }
 }
