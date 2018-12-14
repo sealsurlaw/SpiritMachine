@@ -10,6 +10,7 @@
 		574B154521AF673A007EE782 /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574B154421AF673A007EE782 /* Machine.swift */; };
 		574B154721AF6D5B007EE782 /* Alcohol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574B154621AF6D5B007EE782 /* Alcohol.swift */; };
 		575CAA6B21C31E4500BCB366 /* AlcoholDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575CAA6A21C31E4500BCB366 /* AlcoholDetailViewController.swift */; };
+		575CAA6D21C32E7600BCB366 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575CAA6C21C32E7600BCB366 /* User.swift */; };
 		57ADC83221B88A7900187B7B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ADC83121B88A7900187B7B /* LoginViewController.swift */; };
 		57B0F9CA21B62DC500A56222 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0F9C921B62DC500A56222 /* AccountViewController.swift */; };
 		57D0BF9821B5A7B900665A16 /* MachineDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0BF9721B5A7B900665A16 /* MachineDetailTableViewController.swift */; };
@@ -71,6 +72,7 @@
 		574B154421AF673A007EE782 /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
 		574B154621AF6D5B007EE782 /* Alcohol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alcohol.swift; sourceTree = "<group>"; };
 		575CAA6A21C31E4500BCB366 /* AlcoholDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholDetailViewController.swift; sourceTree = "<group>"; };
+		575CAA6C21C32E7600BCB366 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		57ADC83121B88A7900187B7B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		57B0F9C921B62DC500A56222 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		57D0BF9721B5A7B900665A16 /* MachineDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailTableViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				574B154621AF6D5B007EE782 /* Alcohol.swift */,
 				C0A03CA421B8D91B00AAA32A /* MachineResponse.swift */,
 				575CAA6A21C31E4500BCB366 /* AlcoholDetailViewController.swift */,
+				575CAA6C21C32E7600BCB366 /* User.swift */,
 			);
 			path = SpiritMachineTech;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				57E298B621B88F0800D7C249 /* TabBarViewController.swift in Sources */,
 				57B0F9CA21B62DC500A56222 /* AccountViewController.swift in Sources */,
 				575CAA6B21C31E4500BCB366 /* AlcoholDetailViewController.swift in Sources */,
+				575CAA6D21C32E7600BCB366 /* User.swift in Sources */,
 				C0A03C7121AF60CC00AAA32A /* AppDelegate.swift in Sources */,
 				574B154721AF6D5B007EE782 /* Alcohol.swift in Sources */,
 				574B154521AF673A007EE782 /* Machine.swift in Sources */,
