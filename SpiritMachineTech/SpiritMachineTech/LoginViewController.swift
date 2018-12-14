@@ -34,6 +34,7 @@ class LoginViewController: UIViewController {
                 self.present(alert, animated: true)
             }
             
+            
             if let data = response.result.value {
                 UserDefaults.standard.set(data, forKey: "token")
                 Switcher.updateRootVC()
