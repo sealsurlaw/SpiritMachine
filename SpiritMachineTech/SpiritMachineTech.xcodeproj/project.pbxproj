@@ -16,6 +16,7 @@
 		57D0BF9821B5A7B900665A16 /* MachineDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0BF9721B5A7B900665A16 /* MachineDetailTableViewController.swift */; };
 		57E298B421B88DFA00D7C249 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E298B321B88DFA00D7C249 /* Switcher.swift */; };
 		57E298B621B88F0800D7C249 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E298B521B88F0800D7C249 /* TabBarViewController.swift */; };
+		C070CD2F21C3310100A3F377 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C070CD2E21C3310100A3F377 /* UserResponse.swift */; };
 		C0A03C7121AF60CC00AAA32A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03C7021AF60CC00AAA32A /* AppDelegate.swift */; };
 		C0A03C7321AF60CC00AAA32A /* MachineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03C7221AF60CC00AAA32A /* MachineTableViewController.swift */; };
 		C0A03C7621AF60CC00AAA32A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A03C7421AF60CC00AAA32A /* Main.storyboard */; };
@@ -78,6 +79,8 @@
 		57D0BF9721B5A7B900665A16 /* MachineDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailTableViewController.swift; sourceTree = "<group>"; };
 		57E298B321B88DFA00D7C249 /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
 		57E298B521B88F0800D7C249 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		C070CD2A21C32E5400A3F377 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		C070CD2E21C3310100A3F377 /* UserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		C0A03C6D21AF60CC00AAA32A /* SpiritMachineTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiritMachineTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A03C7021AF60CC00AAA32A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0A03C7221AF60CC00AAA32A /* MachineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineTableViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +133,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C070CD2D21C330F100A3F377 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				C070CD2A21C32E5400A3F377 /* UserResponse.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		C0A03C6421AF60CC00AAA32A = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +149,7 @@
 				C0A03C8F21AF60CF00AAA32A /* SpiritMachineTechUITests */,
 				C0A03C6E21AF60CC00AAA32A /* Products */,
 				C0A03C9E21B8CF6800AAA32A /* Frameworks */,
+				C070CD2D21C330F100A3F377 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,6 +182,7 @@
 				C0A03CA421B8D91B00AAA32A /* MachineResponse.swift */,
 				575CAA6A21C31E4500BCB366 /* AlcoholDetailViewController.swift */,
 				575CAA6C21C32E7600BCB366 /* User.swift */,
+				C070CD2E21C3310100A3F377 /* UserResponse.swift */,
 			);
 			path = SpiritMachineTech;
 			sourceTree = "<group>";
@@ -347,6 +360,7 @@
 				575CAA6D21C32E7600BCB366 /* User.swift in Sources */,
 				C0A03C7121AF60CC00AAA32A /* AppDelegate.swift in Sources */,
 				574B154721AF6D5B007EE782 /* Alcohol.swift in Sources */,
+				C070CD2F21C3310100A3F377 /* UserResponse.swift in Sources */,
 				574B154521AF673A007EE782 /* Machine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

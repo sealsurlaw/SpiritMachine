@@ -27,9 +27,27 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Account"
         
-        id.text = "ID: \(String(describing: user?.id))"
-        email.text = "Email: \(String(describing: user?.email))"
-        memberSince.text = "Member Since: \(String(describing: (user?.memberSince)!))"
+        if let user_id = UserDefaults.standard.string(forKey: "user_id") {
+            id.text = "ID: \(user_id)"
+        } else {
+            id.text = "ID: No ID"
+        }
+        
+        if let user_email = UserDefaults.standard.string(forKey: "user_email") {
+            email.text = "Email: \(user_email)"
+        } else {
+            email.text = "Email: No email"
+        }
+        
+        if let user_created = UserDefaults.standard.string(forKey: "user_created") {
+            memberSince.text = "Member Since: \(user_created)"
+        } else {
+            memberSince.text = ""
+        }
+        
+//        id.text = "ID: \()"
+//        email.text = "Email: \(String(UserDefaults.standard.string(forKey: "user_email")!))"
+//        memberSince.text = "Member Since: \(String(UserDefaults.standard.string(forKey: "user_created")!))"
         
     }
 }
