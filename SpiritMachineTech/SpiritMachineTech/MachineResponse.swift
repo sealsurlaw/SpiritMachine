@@ -45,5 +45,6 @@ class AlcoholJSON: Mappable {
         cont       <- map["container"]
         
         date = Date(timeIntervalSince1970: dateDouble)
+        
     }
 }

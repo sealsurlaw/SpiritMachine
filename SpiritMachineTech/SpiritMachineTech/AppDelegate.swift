@@ -1,16 +1,59 @@
 import UIKit
+import UserNotifications
+import Alamofire
+import AlamofireObjectMapper
+import ObjectMapper
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+        print("Registered")
+        let   tokenString = deviceToken.reduce("", {$0 + String(format: "%02X",    $1)})
+        // kDeviceToken=tokenString
+        print("deviceToken: \(tokenString)")
+        print(deviceToken)
+        
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        
+        print(error)
+        
+    }
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        UserDefaults.standard.set("mytokenisangeles", forKey: "token")
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if let error = error {
+                print("D'oh: \(error.localizedDescription)")
+            } else {
+                application.registerForRemoteNotifications()
+            }
+        }
+        
         Switcher.updateRootVC()
+        
         return true
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("Machine: \(userInfo["machine"]!)")
+        print("Container: \(userInfo["container"]!)")
+        
+        var alcoholPassed: Alcohol?
+        
+        Alcohol.getAlcoholData(machine: userInfo["machine"]! as! Int, container: userInfo["container"]! as! Int, callback:
+            { (_ alcohol: Alcohol) -> () in
+//                alcoholPassed = alcohol
+                print(alcohol)
+            })
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
