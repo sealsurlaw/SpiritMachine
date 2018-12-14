@@ -1,14 +1,14 @@
 import ObjectMapper
 
 class UserResponse: Mappable {
-    var machines: [UserJSON]?
+    var user: UserJSON?
     
     required init?(map: Map){
         
     }
     
     func mapping(map: Map) {
-        machines    <- map["users"]
+        user    <- map["users"]
     }
 }
 

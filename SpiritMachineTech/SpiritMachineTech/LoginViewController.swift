@@ -37,6 +37,11 @@ class LoginViewController: UIViewController {
             
             if let data = response.result.value {
                 UserDefaults.standard.set(data, forKey: "token")
+                User.getUserData(callback: { (_ user: User) -> () in
+                    UserDefaults.standard.set(user.id, forKey: "user_id")
+                    UserDefaults.standard.set(user.email, forKey: "user_email")
+                    UserDefaults.standard.set(String(describing: user.memberSince), forKey: "user_created")
+                })
                 Switcher.updateRootVC()
             }
             
