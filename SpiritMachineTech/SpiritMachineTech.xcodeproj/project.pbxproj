@@ -17,6 +17,9 @@
 		57D0BF9821B5A7B900665A16 /* MachineDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0BF9721B5A7B900665A16 /* MachineDetailTableViewController.swift */; };
 		57E298B421B88DFA00D7C249 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E298B321B88DFA00D7C249 /* Switcher.swift */; };
 		57E298B621B88F0800D7C249 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E298B521B88F0800D7C249 /* TabBarViewController.swift */; };
+		57ED060221C35E8000CD550F /* AlcoholTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED060121C35E8000CD550F /* AlcoholTests.swift */; };
+		57ED060321C35E8900CD550F /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED05FD21C35E0D00CD550F /* UserTests.swift */; };
+		57ED060421C35E8900CD550F /* MachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED05FF21C35E6200CD550F /* MachineTests.swift */; };
 		C070CD2F21C3310100A3F377 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C070CD2E21C3310100A3F377 /* UserResponse.swift */; };
 		C0A03C7121AF60CC00AAA32A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03C7021AF60CC00AAA32A /* AppDelegate.swift */; };
 		C0A03C7321AF60CC00AAA32A /* MachineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03C7221AF60CC00AAA32A /* MachineTableViewController.swift */; };
@@ -80,6 +83,9 @@
 		57D0BF9721B5A7B900665A16 /* MachineDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailTableViewController.swift; sourceTree = "<group>"; };
 		57E298B321B88DFA00D7C249 /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
 		57E298B521B88F0800D7C249 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		57ED05FD21C35E0D00CD550F /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		57ED05FF21C35E6200CD550F /* MachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineTests.swift; sourceTree = "<group>"; };
+		57ED060121C35E8000CD550F /* AlcoholTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholTests.swift; sourceTree = "<group>"; };
 		C070CD2A21C32E5400A3F377 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		C070CD2E21C3310100A3F377 /* UserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		C0A03C6D21AF60CC00AAA32A /* SpiritMachineTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiritMachineTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +196,9 @@
 		C0A03C8421AF60CF00AAA32A /* SpiritMachineTechTests */ = {
 			isa = PBXGroup;
 			children = (
+				57ED05FD21C35E0D00CD550F /* UserTests.swift */,
+				57ED05FF21C35E6200CD550F /* MachineTests.swift */,
+				57ED060121C35E8000CD550F /* AlcoholTests.swift */,
 				C0A03C8521AF60CF00AAA32A /* SpiritMachineTechTests.swift */,
 				C0A03C8721AF60CF00AAA32A /* Info.plist */,
 			);
@@ -369,6 +378,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57ED060321C35E8900CD550F /* UserTests.swift in Sources */,
+				57ED060421C35E8900CD550F /* MachineTests.swift in Sources */,
+				57ED060221C35E8000CD550F /* AlcoholTests.swift in Sources */,
 				C0A03C8621AF60CF00AAA32A /* SpiritMachineTechTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
