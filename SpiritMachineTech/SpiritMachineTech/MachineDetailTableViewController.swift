@@ -20,6 +20,7 @@ class MachineDetailViewController: UIViewController,UITableViewDataSource,  UITa
         let alcohol = list[indexPath.row]
         
         let cell = alcoholTable.dequeueReusableCell(withIdentifier: "alcoholCell")!
+        cell.textLabel?.font = UIFont(name:"American Typewriter", size:18)
         cell.textLabel?.text = alcohol.name
         var taskCheckmark: UITableViewCell.AccessoryType = .checkmark
         cell.tintColor = UIColor.green

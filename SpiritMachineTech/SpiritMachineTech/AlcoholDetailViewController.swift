@@ -27,7 +27,7 @@ class AlcoholDetailViewController: UIViewController {
         if alcohol?.full == true {
             timeLabel.text = "Full"
         } else {
-            timeLabel.text = "Empty at time: \(String(describing: (alcohol?.time_empty)!))"
+            timeLabel.text = "Empty at time: \n \t \(String(describing: (alcohol?.time_empty)!))"
         }
 
     }

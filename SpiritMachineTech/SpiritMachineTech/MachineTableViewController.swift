@@ -21,6 +21,8 @@ class MachineTableViewController: UITableViewController {
         let machine = machineList[indexPath.row]
  
         let cell = tableView.dequeueReusableCell(withIdentifier: "machineCell")!
+        cell.textLabel?.font = UIFont(name:"American Typewriter", size:18)
+        //cell.textLabel?.textColor = UIColor(red: 24, green: 74, blue: 69, alpha: 255)
         cell.textLabel?.text = machine.name
         var taskCheckmark: UITableViewCell.AccessoryType = .checkmark
         cell.tintColor = UIColor.green

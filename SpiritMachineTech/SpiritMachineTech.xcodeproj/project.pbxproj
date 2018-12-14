@@ -11,6 +11,7 @@
 		574B154721AF6D5B007EE782 /* Alcohol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574B154621AF6D5B007EE782 /* Alcohol.swift */; };
 		575CAA6B21C31E4500BCB366 /* AlcoholDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575CAA6A21C31E4500BCB366 /* AlcoholDetailViewController.swift */; };
 		575CAA6D21C32E7600BCB366 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575CAA6C21C32E7600BCB366 /* User.swift */; };
+		575CAA6F21C34B4200BCB366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575CAA6E21C34B4200BCB366 /* Assets.xcassets */; };
 		57ADC83221B88A7900187B7B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ADC83121B88A7900187B7B /* LoginViewController.swift */; };
 		57B0F9CA21B62DC500A56222 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0F9C921B62DC500A56222 /* AccountViewController.swift */; };
 		57D0BF9821B5A7B900665A16 /* MachineDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0BF9721B5A7B900665A16 /* MachineDetailTableViewController.swift */; };
@@ -20,7 +21,6 @@
 		C0A03C7121AF60CC00AAA32A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03C7021AF60CC00AAA32A /* AppDelegate.swift */; };
 		C0A03C7321AF60CC00AAA32A /* MachineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03C7221AF60CC00AAA32A /* MachineTableViewController.swift */; };
 		C0A03C7621AF60CC00AAA32A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A03C7421AF60CC00AAA32A /* Main.storyboard */; };
-		C0A03C7821AF60CF00AAA32A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0A03C7721AF60CF00AAA32A /* Assets.xcassets */; };
 		C0A03C7B21AF60CF00AAA32A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A03C7921AF60CF00AAA32A /* LaunchScreen.storyboard */; };
 		C0A03C8621AF60CF00AAA32A /* SpiritMachineTechTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03C8521AF60CF00AAA32A /* SpiritMachineTechTests.swift */; };
 		C0A03C9121AF60CF00AAA32A /* SpiritMachineTechUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03C9021AF60CF00AAA32A /* SpiritMachineTechUITests.swift */; };
@@ -74,6 +74,7 @@
 		574B154621AF6D5B007EE782 /* Alcohol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alcohol.swift; sourceTree = "<group>"; };
 		575CAA6A21C31E4500BCB366 /* AlcoholDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholDetailViewController.swift; sourceTree = "<group>"; };
 		575CAA6C21C32E7600BCB366 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		575CAA6E21C34B4200BCB366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57ADC83121B88A7900187B7B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		57B0F9C921B62DC500A56222 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		57D0BF9721B5A7B900665A16 /* MachineDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailTableViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +86,6 @@
 		C0A03C7021AF60CC00AAA32A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0A03C7221AF60CC00AAA32A /* MachineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineTableViewController.swift; sourceTree = "<group>"; };
 		C0A03C7521AF60CC00AAA32A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C0A03C7721AF60CF00AAA32A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0A03C7A21AF60CF00AAA32A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0A03C7C21AF60CF00AAA32A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0A03C8121AF60CF00AAA32A /* SpiritMachineTechTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpiritMachineTechTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +166,7 @@
 		C0A03C6F21AF60CC00AAA32A /* SpiritMachineTech */ = {
 			isa = PBXGroup;
 			children = (
+				575CAA6E21C34B4200BCB366 /* Assets.xcassets */,
 				C0A03C7021AF60CC00AAA32A /* AppDelegate.swift */,
 				57E298B321B88DFA00D7C249 /* Switcher.swift */,
 				57ADC83121B88A7900187B7B /* LoginViewController.swift */,
@@ -174,7 +175,6 @@
 				57D0BF9721B5A7B900665A16 /* MachineDetailTableViewController.swift */,
 				57B0F9C921B62DC500A56222 /* AccountViewController.swift */,
 				C0A03C7421AF60CC00AAA32A /* Main.storyboard */,
-				C0A03C7721AF60CF00AAA32A /* Assets.xcassets */,
 				C0A03C7921AF60CF00AAA32A /* LaunchScreen.storyboard */,
 				C0A03C7C21AF60CF00AAA32A /* Info.plist */,
 				574B154421AF673A007EE782 /* Machine.swift */,
@@ -323,7 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0A03C7B21AF60CF00AAA32A /* LaunchScreen.storyboard in Resources */,
-				C0A03C7821AF60CF00AAA32A /* Assets.xcassets in Resources */,
+				575CAA6F21C34B4200BCB366 /* Assets.xcassets in Resources */,
 				C0A03C7621AF60CC00AAA32A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
