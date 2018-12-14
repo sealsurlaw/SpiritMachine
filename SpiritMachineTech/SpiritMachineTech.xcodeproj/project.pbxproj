@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		573FD92221C3766D009B2754 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03C9F21B8CF6800AAA32A /* Alamofire.framework */; };
+		573FD92321C3766D009B2754 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03CAE21B8DB3E00AAA32A /* AlamofireObjectMapper.framework */; };
+		573FD92421C3766D009B2754 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03CA821B8DA0100AAA32A /* ObjectMapper.framework */; };
+		573FD92521C376CD009B2754 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03C9F21B8CF6800AAA32A /* Alamofire.framework */; };
+		573FD92621C376CD009B2754 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03CAE21B8DB3E00AAA32A /* AlamofireObjectMapper.framework */; };
+		573FD92721C376CD009B2754 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03CA821B8DA0100AAA32A /* ObjectMapper.framework */; };
 		574B154521AF673A007EE782 /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574B154421AF673A007EE782 /* Machine.swift */; };
 		574B154721AF6D5B007EE782 /* Alcohol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574B154621AF6D5B007EE782 /* Alcohol.swift */; };
 		575CAA6B21C31E4500BCB366 /* AlcoholDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575CAA6A21C31E4500BCB366 /* AlcoholDetailViewController.swift */; };
@@ -17,9 +23,14 @@
 		57D0BF9821B5A7B900665A16 /* MachineDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0BF9721B5A7B900665A16 /* MachineDetailTableViewController.swift */; };
 		57E298B421B88DFA00D7C249 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E298B321B88DFA00D7C249 /* Switcher.swift */; };
 		57E298B621B88F0800D7C249 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E298B521B88F0800D7C249 /* TabBarViewController.swift */; };
-		57ED060221C35E8000CD550F /* AlcoholTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED060121C35E8000CD550F /* AlcoholTests.swift */; };
 		57ED060321C35E8900CD550F /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED05FD21C35E0D00CD550F /* UserTests.swift */; };
 		57ED060421C35E8900CD550F /* MachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED05FF21C35E6200CD550F /* MachineTests.swift */; };
+		57ED060521C373AD00CD550F /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03CAE21B8DB3E00AAA32A /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57ED060621C373AD00CD550F /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03CA821B8DA0100AAA32A /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57ED060721C373AD00CD550F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03C9F21B8CF6800AAA32A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57ED060821C373EA00CD550F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03C9F21B8CF6800AAA32A /* Alamofire.framework */; };
+		57ED060921C373EA00CD550F /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03CAE21B8DB3E00AAA32A /* AlamofireObjectMapper.framework */; };
+		57ED060A21C373EA00CD550F /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03CA821B8DA0100AAA32A /* ObjectMapper.framework */; };
 		C070CD2F21C3310100A3F377 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C070CD2E21C3310100A3F377 /* UserResponse.swift */; };
 		C0A03C7121AF60CC00AAA32A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03C7021AF60CC00AAA32A /* AppDelegate.swift */; };
 		C0A03C7321AF60CC00AAA32A /* MachineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03C7221AF60CC00AAA32A /* MachineTableViewController.swift */; };
@@ -28,15 +39,6 @@
 		C0A03C8621AF60CF00AAA32A /* SpiritMachineTechTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03C8521AF60CF00AAA32A /* SpiritMachineTechTests.swift */; };
 		C0A03C9121AF60CF00AAA32A /* SpiritMachineTechUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03C9021AF60CF00AAA32A /* SpiritMachineTechUITests.swift */; };
 		C0A03CA521B8D91B00AAA32A /* MachineResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A03CA421B8D91B00AAA32A /* MachineResponse.swift */; };
-		C0A03CB221B8DB7900AAA32A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03C9F21B8CF6800AAA32A /* Alamofire.framework */; };
-		C0A03CB321B8DB7B00AAA32A /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03CA821B8DA0100AAA32A /* ObjectMapper.framework */; };
-		C0A03CB421B8DB7E00AAA32A /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03CAE21B8DB3E00AAA32A /* AlamofireObjectMapper.framework */; };
-		C0A03CB521B8DB8600AAA32A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03C9F21B8CF6800AAA32A /* Alamofire.framework */; };
-		C0A03CB621B8DB8600AAA32A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03C9F21B8CF6800AAA32A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C0A03CB821B8DB8A00AAA32A /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03CA821B8DA0100AAA32A /* ObjectMapper.framework */; };
-		C0A03CB921B8DB8A00AAA32A /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03CA821B8DA0100AAA32A /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C0A03CBA21B8DB8E00AAA32A /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03CAE21B8DB3E00AAA32A /* AlamofireObjectMapper.framework */; };
-		C0A03CBB21B8DB8E00AAA32A /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0A03CAE21B8DB3E00AAA32A /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,9 +65,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C0A03CB921B8DB8A00AAA32A /* ObjectMapper.framework in Embed Frameworks */,
-				C0A03CBB21B8DB8E00AAA32A /* AlamofireObjectMapper.framework in Embed Frameworks */,
-				C0A03CB621B8DB8600AAA32A /* Alamofire.framework in Embed Frameworks */,
+				57ED060521C373AD00CD550F /* AlamofireObjectMapper.framework in Embed Frameworks */,
+				57ED060621C373AD00CD550F /* ObjectMapper.framework in Embed Frameworks */,
+				57ED060721C373AD00CD550F /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,7 +87,6 @@
 		57E298B521B88F0800D7C249 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		57ED05FD21C35E0D00CD550F /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		57ED05FF21C35E6200CD550F /* MachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineTests.swift; sourceTree = "<group>"; };
-		57ED060121C35E8000CD550F /* AlcoholTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholTests.swift; sourceTree = "<group>"; };
 		C070CD2A21C32E5400A3F377 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		C070CD2E21C3310100A3F377 /* UserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		C0A03C6D21AF60CC00AAA32A /* SpiritMachineTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiritMachineTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,12 +114,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0A03CB221B8DB7900AAA32A /* Alamofire.framework in Frameworks */,
-				C0A03CBA21B8DB8E00AAA32A /* AlamofireObjectMapper.framework in Frameworks */,
-				C0A03CB321B8DB7B00AAA32A /* ObjectMapper.framework in Frameworks */,
-				C0A03CB821B8DB8A00AAA32A /* ObjectMapper.framework in Frameworks */,
-				C0A03CB421B8DB7E00AAA32A /* AlamofireObjectMapper.framework in Frameworks */,
-				C0A03CB521B8DB8600AAA32A /* Alamofire.framework in Frameworks */,
+				57ED060821C373EA00CD550F /* Alamofire.framework in Frameworks */,
+				57ED060921C373EA00CD550F /* AlamofireObjectMapper.framework in Frameworks */,
+				57ED060A21C373EA00CD550F /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +124,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				573FD92221C3766D009B2754 /* Alamofire.framework in Frameworks */,
+				573FD92321C3766D009B2754 /* AlamofireObjectMapper.framework in Frameworks */,
+				573FD92421C3766D009B2754 /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +134,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				573FD92521C376CD009B2754 /* Alamofire.framework in Frameworks */,
+				573FD92621C376CD009B2754 /* AlamofireObjectMapper.framework in Frameworks */,
+				573FD92721C376CD009B2754 /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,18 +179,18 @@
 				575CAA6E21C34B4200BCB366 /* Assets.xcassets */,
 				C0A03C7021AF60CC00AAA32A /* AppDelegate.swift */,
 				57E298B321B88DFA00D7C249 /* Switcher.swift */,
+				57B0F9C921B62DC500A56222 /* AccountViewController.swift */,
+				575CAA6A21C31E4500BCB366 /* AlcoholDetailViewController.swift */,
 				57ADC83121B88A7900187B7B /* LoginViewController.swift */,
 				57E298B521B88F0800D7C249 /* TabBarViewController.swift */,
 				C0A03C7221AF60CC00AAA32A /* MachineTableViewController.swift */,
 				57D0BF9721B5A7B900665A16 /* MachineDetailTableViewController.swift */,
-				57B0F9C921B62DC500A56222 /* AccountViewController.swift */,
 				C0A03C7421AF60CC00AAA32A /* Main.storyboard */,
 				C0A03C7921AF60CF00AAA32A /* LaunchScreen.storyboard */,
 				C0A03C7C21AF60CF00AAA32A /* Info.plist */,
 				574B154421AF673A007EE782 /* Machine.swift */,
 				574B154621AF6D5B007EE782 /* Alcohol.swift */,
 				C0A03CA421B8D91B00AAA32A /* MachineResponse.swift */,
-				575CAA6A21C31E4500BCB366 /* AlcoholDetailViewController.swift */,
 				575CAA6C21C32E7600BCB366 /* User.swift */,
 				C070CD2E21C3310100A3F377 /* UserResponse.swift */,
 			);
@@ -198,7 +202,6 @@
 			children = (
 				57ED05FD21C35E0D00CD550F /* UserTests.swift */,
 				57ED05FF21C35E6200CD550F /* MachineTests.swift */,
-				57ED060121C35E8000CD550F /* AlcoholTests.swift */,
 				C0A03C8521AF60CF00AAA32A /* SpiritMachineTechTests.swift */,
 				C0A03C8721AF60CF00AAA32A /* Info.plist */,
 			);
@@ -380,7 +383,6 @@
 			files = (
 				57ED060321C35E8900CD550F /* UserTests.swift in Sources */,
 				57ED060421C35E8900CD550F /* MachineTests.swift in Sources */,
-				57ED060221C35E8000CD550F /* AlcoholTests.swift in Sources */,
 				C0A03C8621AF60CF00AAA32A /* SpiritMachineTechTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,7 +564,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.spiritmachine.SpiritMachineTech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -584,7 +586,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.spiritmachine.SpiritMachineTech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -594,6 +596,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KMFQY7MD2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SpiritMachineTechTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -614,6 +621,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KMFQY7MD2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SpiritMachineTechTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -633,6 +645,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KMFQY7MD2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SpiritMachineTechUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -652,6 +669,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KMFQY7MD2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SpiritMachineTechUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
