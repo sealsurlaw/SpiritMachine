@@ -40,7 +40,7 @@ class AccountViewController: UIViewController {
         }
         
         if let user_created = UserDefaults.standard.string(forKey: "user_created") {
-            memberSince.text = "Member Since: \(user_created)"
+            memberSince.text = "Member Since: \n \t \(user_created)"
         } else {
             memberSince.text = ""
         }

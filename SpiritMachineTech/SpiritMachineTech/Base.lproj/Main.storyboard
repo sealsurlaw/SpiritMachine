@@ -19,21 +19,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXB-oB-1jv">
-                                <rect key="frame" x="16" y="110" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="16" y="110" width="343" height="25.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="22"/>
+                                <color key="textColor" red="0.094117647058823528" green="0.29019607843137252" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROt-OZ-moO">
-                                <rect key="frame" x="16" y="151" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="16" y="155.5" width="343" height="24"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="21"/>
+                                <color key="textColor" red="0.094117647058823528" green="0.29019607843137252" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="memberSince" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTm-x8-NWu">
-                                <rect key="frame" x="16" y="197" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="memberSince" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTm-x8-NWu">
+                                <rect key="frame" x="16" y="204.5" width="343" height="17.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="15"/>
+                                <color key="textColor" red="0.094117647058823528" green="0.29019607843137252" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -118,12 +118,17 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nMZ-gg-Wge">
                                 <rect key="frame" x="87" y="245" width="200" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbe-34-ZZR">
-                                <rect key="frame" x="168" y="329" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
+                                <rect key="frame" x="141" y="329" width="92" height="38"/>
+                                <color key="backgroundColor" red="0.65490196078431373" green="0.60784313725490191" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="22"/>
+                                <size key="titleShadowOffset" width="25" height="25"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.094117647060000004" green="0.2901960784" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="loginButton:" destination="3ZD-if-fYo" eventType="touchUpInside" id="q4o-Ow-BGK"/>
                                 </connections>
@@ -131,7 +136,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ehk-nT-z7V">
                                 <rect key="frame" x="87" y="283" width="200" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="il_570xN.1259963681_q38e" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EPU-Fk-RXS">
@@ -145,15 +150,15 @@
                         <color key="backgroundColor" red="1" green="0.43529411764705883" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="J2e-Em-njQ" firstAttribute="trailing" secondItem="nMZ-gg-Wge" secondAttribute="trailing" constant="88" id="4Lc-o1-1Qt"/>
+                            <constraint firstItem="J2e-Em-njQ" firstAttribute="trailing" secondItem="kbe-34-ZZR" secondAttribute="trailing" constant="142" id="Mhb-m7-uy0"/>
                             <constraint firstItem="Ehk-nT-z7V" firstAttribute="leading" secondItem="J2e-Em-njQ" secondAttribute="leading" constant="87" id="Mjs-Tt-7y6" userLabel="IPassword.leading = Safe Area.leading + 87"/>
                             <constraint firstItem="J2e-Em-njQ" firstAttribute="trailing" secondItem="Ehk-nT-z7V" secondAttribute="trailing" constant="88" id="QxF-b1-Qxi"/>
+                            <constraint firstItem="kbe-34-ZZR" firstAttribute="leading" secondItem="J2e-Em-njQ" secondAttribute="leading" constant="141" id="Udi-2j-koK"/>
                             <constraint firstItem="J2e-Em-njQ" firstAttribute="trailing" secondItem="EPU-Fk-RXS" secondAttribute="trailing" constant="105" id="a7F-Hv-pHS"/>
                             <constraint firstItem="EPU-Fk-RXS" firstAttribute="leading" secondItem="J2e-Em-njQ" secondAttribute="leading" constant="104" id="cjw-nP-Bxb"/>
                             <constraint firstItem="EPU-Fk-RXS" firstAttribute="top" secondItem="J2e-Em-njQ" secondAttribute="top" constant="38" id="cnZ-h5-rfB"/>
                             <constraint firstItem="nMZ-gg-Wge" firstAttribute="top" secondItem="EPU-Fk-RXS" secondAttribute="bottom" constant="46" id="dAE-VJ-kLz"/>
-                            <constraint firstItem="kbe-34-ZZR" firstAttribute="leading" secondItem="J2e-Em-njQ" secondAttribute="leading" constant="168" id="hAL-1x-LGt"/>
                             <constraint firstItem="kbe-34-ZZR" firstAttribute="top" secondItem="Ehk-nT-z7V" secondAttribute="bottom" constant="16" id="hoq-WJ-tA0"/>
-                            <constraint firstItem="J2e-Em-njQ" firstAttribute="trailing" secondItem="kbe-34-ZZR" secondAttribute="trailing" constant="169" id="jON-xv-dX2"/>
                             <constraint firstItem="Ehk-nT-z7V" firstAttribute="top" secondItem="nMZ-gg-Wge" secondAttribute="bottom" constant="8" id="msJ-Gk-C0K"/>
                             <constraint firstItem="nMZ-gg-Wge" firstAttribute="leading" secondItem="J2e-Em-njQ" secondAttribute="leading" constant="87" id="omr-DJ-jJo"/>
                         </constraints>
