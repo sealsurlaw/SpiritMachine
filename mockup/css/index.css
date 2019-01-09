@@ -12,6 +12,7 @@
 .alcohol-row {
     width: 100%;
     margin: 0;
+    margin-bottom: 20px;
 }
 
 .dollar {
@@ -22,7 +23,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 150px;
+    width: 120px;
 }
 
 .text-center {
@@ -30,13 +31,19 @@
 }
 
 .name {
-    line-height: 25px;
+    line-height: 30px;
 }
 
 .price {
     position: relative;
-    top: -5px;
+    top: 10px;
 }
+
+/* .drink {
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+} */
 
 .drink-link {
     color: black;
