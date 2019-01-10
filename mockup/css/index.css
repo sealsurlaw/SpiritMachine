@@ -47,6 +47,7 @@
 
 .drink-link, .chevron-link{
     color: black;
+    user-select: none;
 }
 
 .drink-link:hover, .chevron-link:hover {
