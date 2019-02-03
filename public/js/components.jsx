@@ -3,7 +3,7 @@ class AppFlow extends React.Component {
         if (this.props.number == 0) {
             return (
                 <div>
-                    <Navbar money="0.00" />
+                    <Navbar money={this.props.money} />
                     <TapCard app={this.props.app} />
                 </div>
             );
@@ -11,7 +11,7 @@ class AppFlow extends React.Component {
         if (this.props.number == 2) {
             return (
                 <div>
-                    <Navbar money="23.34" />
+                    <Navbar money={this.props.money} />
                     <GetDrink app={this.props.app} />
                 </div>
             );
@@ -19,7 +19,7 @@ class AppFlow extends React.Component {
         else {
             return (
                 <div>
-                    <Navbar money="23.34" />
+                    <Navbar money={this.props.money} />
                     <Body app={this.props.app} />
                 </div>
             );
@@ -80,7 +80,9 @@ class Body extends React.Component {
                             <div className="alcohol-row row align-items-end">
                                 {this.state.alcohol1.map((alcohol, index) => (
                                     <div className="drink col-sm" key={index}>
-                                        <Alcohol name={alcohol.name} src={alcohol.image} price={alcohol.price} />
+                                        <a onClick={(e) => this.alcoholSelectHandler(this.props.app, alcohol)} className="chevron-link">
+                                            <Alcohol name={alcohol.name} src={alcohol.image} price={alcohol.price} />
+                                        </a>
                                     </div>
                                 ))}
                             </div>
@@ -127,10 +129,6 @@ class Chevron extends React.Component {
 }
 
 class GetDrink extends React.Component {
-    // tappedHandler(app) {
-    //     app.setState({ number: 1 })
-    // }
-
     render() {
         return (
             <div className="get-box">
@@ -147,7 +145,7 @@ class Navbar extends React.Component {
             <nav className="navbar navbar-dark bg-primary">
                 <a className="navbar-brand" href="#">
                     <i className="fas fa-dollar-sign fa-2x">
-                        <span className="dollar">{this.props.money}</span>
+                        <span className="dollar">{this.props.money.toFixed(2)}</span>
                     </i>
                 </a>
                 <span className="navbar-text">
@@ -159,6 +157,22 @@ class Navbar extends React.Component {
 }
 
 class TapCard extends React.Component {
+    componentDidMount() {
+        fetch("/api/nfc")
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    this.props.app.setState({
+                        money: result.money,
+                        number: 1
+                    })
+                },
+                (error) => {
+                    console.log(error)
+                }
+            )
+    }
+
     tappedHandler(app) {
         app.setState({ number: 1 })
     }
@@ -167,7 +181,8 @@ class TapCard extends React.Component {
         return (
             <div className="tap-box">
                 <h2 className="text-center">Please tap your Spirit Card now</h2>
-                <button onClick={(e) => this.tappedHandler(this.props.app)}>OK</button>
+                <img src="images/nfc.gif" className="image-center" />
+                {/* <button onClick={(e) => this.tappedHandler(this.props.app)}>OK</button> */}
             </div >
         );
     }

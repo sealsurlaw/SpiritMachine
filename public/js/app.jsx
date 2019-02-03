@@ -30,13 +30,14 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      money: 0,
       number: 0
     }
   }
 
   render() {
     return (
-      <AppFlow number={this.state.number} app={this} />
+      <AppFlow number={this.state.number} money={this.state.money} app={this} />
     );
   }
 }

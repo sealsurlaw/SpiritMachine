@@ -24,8 +24,8 @@
     margin-bottom: 25px;
     margin-left: 25%;
     margin-right: 25%;
-    background-color: blue;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 .dollar {
@@ -68,8 +68,8 @@
     margin-top: 25px;
     margin-left: 25%;
     margin-right: 25%;
-    background-color: blue;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 
@@ -90,4 +90,8 @@
 .drink-link:hover, .chevron-link:hover {
     color: black;
     text-decoration: none;
+}
+
+body {
+    user-select: none;
 }
