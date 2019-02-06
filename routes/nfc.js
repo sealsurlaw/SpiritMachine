@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var axios = require('axios');
 var shell = require('shell-exec');
+var hex64 = require('hex64');
 
 /* GET nfc data. */
 router.get('/', function (req, res, next) {
@@ -12,6 +13,7 @@ router.get('/', function (req, res, next) {
         .then(out => {
 
             var nfcData = out.stdout;
+            nfcData = hex64.decode(nfcData);
             // Get wallet balance from database
             axios.post('https://spirit-machine.herokuapp.com/wallet/' + nfcData)
                 .then(jsonData => {
