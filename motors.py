@@ -1,15 +1,28 @@
+import sys
+import time
+from adafruit_motorkit import MotorKit
 
-i = 1
-
-while i == 1:
-    print("Pick a Motor to turn on")
-
-    motors = int(input())
-    if motors == 1:
+kit = MotorKit()
+arguments = len(sys.argv)
+for i in range(1,arguments):   
+        if int(sys.argv[i]) == 1:
             print("Motor 1 is running")
-    elif  motors == 2:
+            kit.motor1.throttle = 1.0
+            time.sleep(0.5)
+            kit.motor1.throttle = 0
+        elif  int(sys.argv[i]) == 2:
+            kit.motor2.throttle = 1.0
+            time.sleep(0.5)
+            kit.motor2.throttle = 0
             print("Motor 2 is running")
-    elif motors == 3:
-            print("Motors 1 and 2 are running")
-    else:
-            print("No Motors selected")
+        elif int(sys.argv[i]) == 3:
+            kit.motor3.throttle = 1.0
+            time.sleep(0.5)
+            kit.motor3.throttle = 0
+            print("Motor 3 is running")
+        elif int(sys.argv[i]) == 4:
+            kit.motor4.throttle = 1.0
+            time.sleep(0.5)
+            kit.motor4.throttle = 0
+            print("Motor 4 is running")
+                
