@@ -92,6 +92,10 @@
     text-decoration: none;
 }
 
+.wallet {
+    width: 215px;
+}
+
 body {
     user-select: none;
     zoom: 0.6;

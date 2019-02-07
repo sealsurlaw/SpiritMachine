@@ -222,7 +222,7 @@ class RetrievingData extends React.Component {
         return (
             <div className="tap-box">
                 <h2 className="text-center">Please wait. Retrieving wallet balance...</h2>
-                <img src="images/wallet.gif" className="image-center" />
+                <img src="images/wallet.gif" className="image-center wallet" />
             </div >
         );
     }
