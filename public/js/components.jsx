@@ -8,11 +8,19 @@ class AppFlow extends React.Component {
                 </div>
             );
         }
+        if (this.props.number == 1) {
+            return (
+                <div>
+                    <Navbar money={this.props.money} />
+                    <RetrievingData app={this.props.app} />
+                </div>
+            );
+        }
         if (this.props.number == 2) {
             return (
                 <div>
                     <Navbar money={this.props.money} />
-                    <GetDrink app={this.props.app} />
+                    <Body app={this.props.app} />
                 </div>
             );
         }
@@ -20,7 +28,7 @@ class AppFlow extends React.Component {
             return (
                 <div>
                     <Navbar money={this.props.money} />
-                    <Body app={this.props.app} />
+                    <GetDrink app={this.props.app} />
                 </div>
             );
         }
@@ -61,7 +69,7 @@ class Body extends React.Component {
     alcoholSelectHandler(app, alcohol) {
         app.setState({
             alcohol: alcohol,
-            number: 2
+            number: app.state.number + 1
         });
     }
 
@@ -158,13 +166,13 @@ class Navbar extends React.Component {
 
 class TapCard extends React.Component {
     componentDidMount() {
-        fetch("/api/nfc")
+        fetch("/api/nfc/card")
             .then(res => res.json())
             .then(
                 (result) => {
                     this.props.app.setState({
-                        money: result.money,
-                        number: 1
+                        nfcData: result,
+                        number: this.props.app.state.number + 1
                     })
                 },
                 (error) => {
@@ -182,7 +190,37 @@ class TapCard extends React.Component {
             <div className="tap-box">
                 <h2 className="text-center">Please tap your Spirit Card now</h2>
                 <img src="images/nfc.gif" className="image-center" />
-                {/* <button onClick={(e) => this.tappedHandler(this.props.app)}>OK</button> */}
+            </div >
+        );
+    }
+}
+
+class RetrievingData extends React.Component {
+    componentDidMount() {
+        fetch("/api/nfc/money/" + this.props.app.nfcData)
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    this.props.app.setState({
+                        money: result.money,
+                        number: this.props.app.state.number + 1
+                    })
+                },
+                (error) => {
+                    console.log(error)
+                }
+            )
+    }
+
+    tappedHandler(app) {
+        app.setState({ number: 1 })
+    }
+
+    render() {
+        return (
+            <div className="tap-box">
+                <h2 className="text-center">Please wait. Retrieving wallet balance...</h2>
+                <img src="images/nfc.gif" className="image-center" />
             </div >
         );
     }
