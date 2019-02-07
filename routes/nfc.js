@@ -15,7 +15,7 @@ router.get('/card', function (req, res, next) {
             var nfcData = out.stdout;
             nfcData = hex64.decode(nfcData);
 
-            res.send(nfcData);
+            res.json({data: nfcData});
         })
         .catch(err => {
             console.log(err);

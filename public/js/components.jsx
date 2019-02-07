@@ -69,7 +69,7 @@ class Body extends React.Component {
     alcoholSelectHandler(app, alcohol) {
         app.setState({
             alcohol: alcohol,
-            number: app.state.number + 1
+            number: 3
         });
     }
 
@@ -170,9 +170,10 @@ class TapCard extends React.Component {
             .then(res => res.json())
             .then(
                 (result) => {
+                    console.log(result.data);
                     this.props.app.setState({
-                        nfcData: result,
-                        number: this.props.app.state.number + 1
+                        nfcData: result.data,
+                        number: 1
                     })
                 },
                 (error) => {
@@ -197,13 +198,14 @@ class TapCard extends React.Component {
 
 class RetrievingData extends React.Component {
     componentDidMount() {
-        fetch("/api/nfc/money/" + this.props.app.nfcData)
+        console.log(this.props.app.state.nfcData);
+        fetch("/api/nfc/money/" + this.props.app.state.nfcData)
             .then(res => res.json())
             .then(
                 (result) => {
                     this.props.app.setState({
                         money: result.money,
-                        number: this.props.app.state.number + 1
+                        number: 2
                     })
                 },
                 (error) => {
