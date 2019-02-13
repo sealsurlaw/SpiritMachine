@@ -20,6 +20,7 @@ router.get('/card', function (req, res, next) {
         .catch(err => {
             console.log(err);
         });
+    // res.json({data: '4VhvfYj4vF09B34iPrThnzYWc6TORZ2ZQ-heqNWi4heQbw=='});
 
 });
 
