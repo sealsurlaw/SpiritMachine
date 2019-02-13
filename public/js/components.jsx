@@ -137,6 +137,23 @@ class Chevron extends React.Component {
 }
 
 class GetDrink extends React.Component {
+    componentDidMount() {
+        console.log(this.props.app.state.nfcData);
+        fetch("/api/nfc/1")
+            .then(res => res.json());
+        // .then(
+        //     (result) => {
+        //         this.props.app.setState({
+        //             money: result.money,
+        //             number: 2
+        //         })
+        //     },
+        //     (error) => {
+        //         console.log(error)
+        //     }
+        // )
+    }
+
     render() {
         return (
             <div className="get-box">
