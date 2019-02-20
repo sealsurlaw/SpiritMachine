@@ -1,0 +1,102 @@
+.alcohol-container {
+    width: 100%;
+    margin: 0;
+    padding: 25px;
+    /* background-color: lightblue; */
+    background-color: white;
+    /* border: 1px;
+    border-style: solid;
+    border-color: red; */
+}
+
+.alcohol-row {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.get-box {
+    width: 50%;
+    padding: 0;
+    padding-top: 25px;
+    border: 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: white;
+    color: black;
+}
+
+.dollar {
+    font-family: "Verdana";
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.image-alcohol {
+    height: 100px;
+    width: 100px;
+}
+
+.image-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.name {
+    line-height: 30px;
+}
+
+.price {
+    position: relative;
+    top: 10px;
+}
+
+.tap-box {
+    width: 50%;
+    padding: 0;
+    padding-top: 25px;
+    border: 0;
+    margin-top: 25px;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: white;
+    color: black;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+/* .drink {
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+} */
+
+.drink-link, .chevron-link{
+    color: black;
+}
+
+.drink-link:hover, .chevron-link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.wallet {
+    width: 215px;
+}
+
+body {
+    user-select: none;
+    zoom: 0.6;
+}
