@@ -15,6 +15,10 @@
     margin-bottom: 20px;
 }
 
+.chevron-right {
+    float: right;
+}
+
 .get-box {
     width: 50%;
     padding: 0;
@@ -37,8 +41,8 @@
 }
 
 .image-alcohol {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
 }
 
 .image-center {
@@ -47,17 +51,24 @@
     margin-right: auto;
 }
 
+.loading {
+    font-size: 100px;
+}
+
 .text-center {
     text-align: center;
 }
 
 .name {
-    line-height: 30px;
+    line-height: 50px;
+    font-size: 50px;
+    height: 100px;
 }
 
 .price {
     position: relative;
     top: 10px;
+    font-size: 50px;
 }
 
 .tap-box {

@@ -31,7 +31,8 @@ class App extends React.Component {
     super(props)
     this.state = {
       money: 0,
-      number: 0
+      machine: 1,
+      number: 0,
     }
   }
 

@@ -6,6 +6,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var nfcRouter = require('./routes/nfc');
+var machineRouter = require('./routes/machine');
 var motorRouter = require('./routes/pump');
 var newMachine = require('./routes/newMachine');
 
@@ -20,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/nfc', nfcRouter);
+app.use('/api/machine', machineRouter);
 app.use('/api/motor', motorRouter);
 app.use('/newMachine', newMachine);
 
