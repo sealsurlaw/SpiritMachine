@@ -9,10 +9,35 @@
     border-color: red; */
 }
 
+.alcohol-filter {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-right : 0;
+    margin-top: -25px;
+    margin-right: -10px;
+    margin-left: -10px;
+    margin-bottom: 25px;
+
+    font-size: 50px;
+
+    background-color: white;
+    color: black;
+}
+
+.alcohol-filter-selected {
+    background-color: black;
+    color: white;
+}
+
 .alcohol-row {
     width: 100%;
     margin: 0;
     margin-bottom: 20px;
+}
+
+.chevron {
+    font-size: 100px;
 }
 
 .chevron-right {
@@ -62,7 +87,7 @@
 .name {
     line-height: 50px;
     font-size: 50px;
-    height: 100px;
+    height: 150px;
 }
 
 .price {
@@ -94,12 +119,23 @@
     border-color: red;
 } */
 
-.drink-link, .chevron-link{
+.alcohol-link, .drink-link, .chevron-link{
     color: black;
+    display: block;
 }
 
-.drink-link:hover, .chevron-link:hover {
+.alcohol-link:hover, .drink-link:hover, .chevron-link:hover {
     color: black;
+    text-decoration: none;
+}
+
+.alcohol-link-selected {
+    color: white;
+    display: block;
+}
+
+.alcohol-link-selected:hover {
+    color: white;
     text-decoration: none;
 }
 

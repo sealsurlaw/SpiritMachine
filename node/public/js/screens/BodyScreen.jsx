@@ -4,7 +4,12 @@ class BodyScreen extends React.Component {
         this.state = {
             cocktails: null,
             cocktail: [],
+            selectionPtr: 0,
+            selectedAlcohol: 0,
         };
+
+        this.leftHandler = this.leftHandler.bind(this);
+        this.rightHandler = this.rightHandler.bind(this);
     }
 
     componentWillMount() {
@@ -22,6 +27,41 @@ class BodyScreen extends React.Component {
             })
     }
 
+    leftHandler = () => {
+        if (this.state.selectionPtr - 4 < 0) {
+            let newPtr = (this.state.cocktail.length) - (this.state.cocktail.length % 4);
+            this.setState({
+                selectionPtr: newPtr,
+            });
+        }
+        else {
+            this.setState({
+                selectionPtr: this.state.selectionPtr - 4,
+            })
+        }
+    }
+
+    rightHandler = () => {
+        if (this.state.selectionPtr + 4 >= this.state.cocktail.length) {
+            this.setState({
+                selectionPtr: 0,
+            });
+        }
+        else {
+            this.setState({
+                selectionPtr: this.state.selectionPtr + 4,
+            })
+        }
+    }
+
+    alcoholSelectorHandler = (index, e) => {
+        this.setState({
+            selectionPtr: 0,
+            selectedAlcohol: index,
+            cocktail: this.state.cocktails[index].cocktails,
+        })
+    }
+
     render() {
         if (this.state.cocktails == null) {
             return (
@@ -33,32 +73,70 @@ class BodyScreen extends React.Component {
             )
         }
         else {
+
+            const cocktailBox = this.state.cocktails.map((cocktail, index) => {
+                if (this.state.selectedAlcohol == index) {
+                    return (
+                        <div className="alcohol-filter alcohol-filter-selected col-sm text-center" key={index}>
+                            <a href="#" onClick={(e) => this.alcoholSelectorHandler(index, e)} className="alcohol-link-selected">
+                                {cocktail.alcohol}
+                            </a>
+                        </div>
+                    );
+                }
+                else {
+                    return (
+                        <div className="alcohol-filter col-sm text-center" key={index}>
+                            <a href="#" onClick={(e) => this.alcoholSelectorHandler(index, e)} className="alcohol-link">
+                                {cocktail.alcohol}
+                            </a>
+                        </div>
+                    );
+                }
+            });
+
+            const cocktailSelection = this.state.cocktail.map((cocktail, index) => {
+                if (this.state.cocktail[index] != null &&
+                    index >= this.state.selectionPtr &&
+                    index < this.state.selectionPtr + 4) {
+                    return (
+                        <div className="alcohol col-sm" key={index}>
+                            <Alcohol
+                                name={cocktail.name}
+                                src={cocktail.image}
+                                price={cocktail.price} />
+                        </div>
+                    );
+                }
+
+                //TODO Pad the end of the array with additional components
+                // to equal 4 across
+                //
+                // if (index == this.state.cocktail.length - 1 &&
+                //     index >= this.state.selectionPtr &&
+                //     index < this.state.selectionPtr + 4) {
+                //     for (let i = index; (i < this.state.selectionPtr + 4); ++i)
+                //         return (
+                //             <div className="alcohol col-sm" key={index}>
+                //                 {/* Empty */}
+                //             </div>
+                //         );
+                // }
+            }
+            );
+
             return (
                 <div className="alcohol-container container-fluid">
                     <div className="row">
+                        {cocktailBox}
+                    </div>
+                    <div className="row">
                         <div className="chevron col-sm align-self-center">
-                            <Chevron side="left" />
+                            <Chevron side="left" handler={this.leftHandler} />
                         </div>
-                        <div className="alcohol col-sm">
-                            <Alcohol
-                                name={this.state.cocktail[0].name}
-                                src={this.state.cocktail[0].image}
-                                price={this.state.cocktail[0].price} />
-                        </div>
-                        <div className="alcohol col-sm">
-                            <Alcohol
-                                name={this.state.cocktail[1].name}
-                                src={this.state.cocktail[1].image}
-                                price={this.state.cocktail[1].price} />
-                        </div>
-                        <div className="alcohol col-sm">
-                            <Alcohol
-                                name={this.state.cocktail[2].name}
-                                src={this.state.cocktail[2].image}
-                                price={this.state.cocktail[2].price} />
-                        </div>
+                        {cocktailSelection}
                         <div className="chevron col-sm align-self-center">
-                            <Chevron side="right" />
+                            <Chevron side="right" handler={this.rightHandler} />
                         </div>
                     </div>
                 </div>
@@ -95,112 +173,18 @@ class Alcohol extends React.Component {
 
 class Chevron extends React.Component {
     render() {
+        let arrow;
         if (this.props.side == "left") {
-            return <i className="fas fa-chevron-circle-left fa-4x"></i>;
+            arrow = <i onClick={this.handler} className="chevron fas fa-chevron-circle-left fa-4x"></i>;
         }
-        else if (this.props.side == "right") {
-            return <i className="fas fa-chevron-circle-right fa-4x chevron-right"></i>;
+        else {
+            arrow = <i className="chevron fas fa-chevron-circle-right fa-4x chevron-right"></i>;
         }
+
+        return (
+            <a href="#" onClick={this.props.handler} className="chevron-link">
+                {arrow}
+            </a >
+        );
     }
 }
-
-// class BodyScreen extends React.Component {
-//     constructor(props) {
-//         super(props)
-//         this.state = {
-//             alcohol1: alcohols1,
-//             alcohol2: alcohols2,
-//         };
-//     }
-
-//     scrollHandler(body, direction) {
-//         const temp1 = alcohols1;
-//         const temp2 = alcohols2;
-//         alcohols1 = alcohols3;
-//         alcohols2 = alcohols4;
-//         alcohols3 = temp1;
-//         alcohols4 = temp2;
-//         body.setState({ alcohol1: alcohols1, alcohol2: alcohols2 })
-//     }
-
-//     alcoholSelectHandler(app, alcohol) {
-//         app.setState({
-//             alcohol: alcohol,
-//             number: 3
-//         });
-//     }
-
-//     render() {
-//         return (
-//             <div className="body-container container-fluid">
-//                 <div className="row">
-//                     <div className="left-chevron col-sm-auto align-self-center">
-//                         <a onClick={(e) => this.scrollHandler(this, "left")} className="chevron-link">
-//                             <Chevron side="left" />
-//                         </a>
-//                     </div>
-
-//                     <div className="body-container col-sm">
-//                         <div className="alcohol-container container-fluid">
-//                             <div className="alcohol-row row align-items-end">
-//                                 {this.state.alcohol1.map((alcohol, index) => (
-//                                     <div className="drink col-sm" key={index}>
-//                                         <a onClick={(e) => this.alcoholSelectHandler(this.props.app, alcohol)} className="chevron-link">
-//                                             <Alcohol name={alcohol.name} src={alcohol.image} price={alcohol.price} />
-//                                         </a>
-//                                     </div>
-//                                 ))}
-//                             </div>
-
-//                             <div className="divider row align-items-center">
-//                                 <div className="col-sm">
-//                                     <hr />
-//                                 </div>
-//                             </div>
-
-
-//                             <div className="alcohol-row row align-items-end">
-//                                 {this.state.alcohol2.map((alcohol, index) => (
-//                                     <div className="drink col-sm" key={index + 4}>
-//                                         <a onClick={(e) => this.alcoholSelectHandler(this.props.app, alcohol)} className="chevron-link">
-//                                             <Alcohol name={alcohol.name} src={alcohol.image} price={alcohol.price} />
-//                                         </a>
-//                                     </div>
-//                                 ))}
-//                             </div>
-//                         </div>
-//                     </div>
-
-//                     <div className="right-chevron col-sm-auto align-self-center">
-//                         <a onClick={(e) => this.scrollHandler(this, "right")} className="chevron-link">
-//                             <Chevron side="right" />
-//                         </a>
-//                     </div>
-//                 </div>
-//             </div>
-//         );
-//     }
-// }
-
-// class Alcohol extends React.Component {
-//     render() {
-//         return (
-//             <a href="#" className="drink-link">
-//                 <h2 className="name text-center">{this.props.name}</h2>
-//                 <img src={this.props.src} className="image-alcohol image-center" alt="Drink" />
-//                 <h4 className="price text-center">{this.props.price}</h4>
-//             </a>
-//         );
-//     }
-// }
-
-// class Chevron extends React.Component {
-//     render() {
-//         if (this.props.side == "left") {
-//             return <i className="fas fa-chevron-circle-left fa-4x"></i>;
-//         }
-//         else if (this.props.side == "right") {
-//             return <i className="fas fa-chevron-circle-right fa-4x"></i>;
-//         }
-//     }
-// }
