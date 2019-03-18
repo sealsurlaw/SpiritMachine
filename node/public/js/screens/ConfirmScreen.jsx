@@ -7,12 +7,20 @@ class ConfirmScreen extends React.Component {
         })
     }
 
+    confirmHandler = () => {
+        let { app } = this.props;
+
+        app.setState({
+            number: 4,
+        })
+    }
+
     render() {
         let { name, image, price } = this.props.app.state.selectedCocktail;
         let { money } = this.props.app.state;
 
         return (
-            <div className="container border m-3 p-2 mr-auto ml-auto rounded">
+            <div className="container border m-3 p-2 mr-auto ml-auto rounded text-dark">
                 <div className="row justify-content-center">
                     <div className="col-sm">
                         <img src={image} alt="Drink image" className="image-alcohol image-center rounded-circle" />
@@ -39,7 +47,7 @@ class ConfirmScreen extends React.Component {
                         <button type="button" onClick={() => this.backHandler()} className="btn btn-secondary btn-lg btn-block">Back</button>
                     </div>
                     <div className="col-sm">
-                        <button type="button" className="btn btn-success btn-lg btn-block">Confirm</button>
+                        <button type="button" onClick={() => this.confirmHandler()} className="btn btn-success btn-lg btn-block">Confirm</button>
                     </div>
                 </div>
             </div>

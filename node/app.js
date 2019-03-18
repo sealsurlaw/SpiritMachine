@@ -7,7 +7,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var nfcRouter = require('./routes/nfc');
 var machineRouter = require('./routes/machine');
-var motorRouter = require('./routes/pump');
+var pourRouter = require('./routes/pour');
 var newMachine = require('./routes/newMachine');
 
 var app = express();
@@ -22,7 +22,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/nfc', nfcRouter);
 app.use('/api/machine', machineRouter);
-app.use('/api/motor', motorRouter);
+app.use('/pour', pourRouter);
 app.use('/newMachine', newMachine);
 
 module.exports = app;

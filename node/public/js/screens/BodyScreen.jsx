@@ -71,7 +71,7 @@ class BodyScreen extends React.Component {
             selectionPtr: 0,
             selectedAlcohol: index,
             cocktail: cocktails[index].cocktails,
-        })
+        });
     }
 
     pickedAlcoholHandler = (whichAlcohol, e) => {
@@ -96,9 +96,8 @@ class BodyScreen extends React.Component {
             const cocktailBox = cocktails.map((currCocktail, index) => {
                 if (selectedAlcohol == index) {
                     return (
-                        // <div className="alcohol-filter alcohol-filter-selected col-sm text-center m-0 rounded-bottom border" key={index}>
-                        <div className="text-white bg-dark h1 col-sm text-center pt-2 pb-2 m-0 rounded-bottom border border-top-0" key={index}>
-                            <a href="#" onClick={(e) => this.alcoholSelectorHandler(index, e)} className="alcohol-link-selected">
+                        <div className="bg-dark h1 col-sm text-center pt-2 pb-2 m-0 rounded-bottom border border-top-0" key={index}>
+                            <a href="#" onClick={(e) => this.alcoholSelectorHandler(index, e)} className="link text-white">
                                 {currCocktail.alcohol}
                             </a>
                         </div>
@@ -106,8 +105,8 @@ class BodyScreen extends React.Component {
                 }
                 else {
                     return (
-                        <div className="text-dark bg-light h1 col-sm text-center pt-2 pb-2 m-0 rounded-bottom border border-top-0" key={index}>
-                            <a href="#" onClick={(e) => this.alcoholSelectorHandler(index, e)} className="alcohol-link">
+                        <div className="bg-light h1 col-sm text-center pt-2 pb-2 m-0 rounded-bottom border border-top-0" key={index}>
+                            <a href="#" onClick={(e) => this.alcoholSelectorHandler(index, e)} className="link text-dark">
                                 {currCocktail.alcohol}
                             </a>
                         </div>
@@ -122,9 +121,7 @@ class BodyScreen extends React.Component {
                     return (
                         <div className="alcohol col-sm align-self-end" key={index}>
                             <Alcohol
-                                name={currCocktail.name}
-                                src={currCocktail.image}
-                                price={currCocktail.price}
+                                cocktail={cocktail[index]}
                                 app={app} />
                         </div>
                     );
@@ -169,28 +166,32 @@ class Alcohol extends React.Component {
     constructor(props) {
         super(props);
 
+        let { name, price, image } = this.props.cocktail;
+
         this.state = {
             image: '/images/noimage.png',
         }
 
-        if (this.props.src != null) {
+        if (image != null) {
             this.state = {
-                image: this.props.src,
+                image: image,
             }
         }
     }
 
     componentDidUpdate() {
+        let { image } = this.props.cocktail;
+
         // Force images to update
-        if (this.state.image != this.props.src &&
-            this.props.src != null) {
+        if (this.state.image != image &&
+            image != null) {
 
             this.setState({
-                image: this.props.src,
+                image: image,
             });
 
         }
-        if (this.props.src == null &&
+        if (image == null &&
             this.state.image != '/images/noimage.png') {
 
             this.setState({
@@ -201,36 +202,29 @@ class Alcohol extends React.Component {
     }
 
     selectHandler = () => {
-        let { app, name, price } = this.props;
+        let { app, cocktail } = this.props;
+        let { name, price } = this.props.cocktail;
         let { image } = this.state;
+
+        console.log(this.props.cocktail);
 
         // Go to GetDrinkScreen
         app.setState({
             number: 3,
-            selectedCocktail: {
-                image: image,
-                name: name,
-                price: price,
-            },
+            selectedCocktail: cocktail,
         });
     }
 
     render() {
-        let { name, price } = this.props;
+        let { name, price } = this.props.cocktail;
         let { image } = this.state;
 
         return (
-            <a href="#" onClick={() => this.selectHandler()} className="drink-link">
+            <a href="#" onClick={() => this.selectHandler()} className="link text-dark">
                 <h2 className="text-center"><p className="h2 font-italic cocktail-name">{name}</p></h2>
                 <img src={image} className="image-center cocktail-image mt-4 rounded" alt="Drink" />
                 <h4 className="text-center"><p className="h3 text-muted mt-4">${price.toFixed(2)}</p></h4>
             </a>
-
-            // <a href="#" onClick={() => this.selectHandler()} className="drink-link">
-            //     <h2 className="name text-center">{this.props.name}</h2>
-            //     <img src={this.state.image} className="image-alcohol image-center" alt="Drink" />
-            //     <h4 className="price text-center">${this.props.price.toFixed(2)}</h4>
-            // </a>
         );
     }
 }
@@ -248,7 +242,7 @@ class Chevron extends React.Component {
         }
 
         return (
-            <a href="#" onClick={handler} className="chevron-link">
+            <a href="#" onClick={handler} className="link text-dark">
                 {arrow}
             </a >
         );
