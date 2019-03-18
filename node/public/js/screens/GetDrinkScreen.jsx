@@ -39,6 +39,10 @@ class GetDrinkScreen extends React.Component {
         let pouringMessage = '';
         let loadingGif;
 
+        if (this.props.app.state.selectedCocktail.image == null) {
+            image = '/images/noimage.png';
+        }
+
         if (this.state.pourType == 'ALCOHOL') {
             pouringMessage = 'Please wait. Dispensing a shot of ' + alcohol.name + '...';
         }
@@ -71,9 +75,9 @@ class GetDrinkScreen extends React.Component {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-sm text-center h1 font-italic">{name}</div>
+                    <div className="col-sm text-center h1 font-italic mt-2">{name}</div>
                 </div>
-                <hr className="w-75" />
+                <hr className="w-75 border" />
                 <div className="row">
                     <div className="col-sm text-center h1">
                         {pouringMessage}

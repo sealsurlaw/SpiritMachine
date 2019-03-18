@@ -31,7 +31,6 @@ router.get('/money/:nfcData', function (req, res, next) {
     // Get wallet balance from database
     axios.post('https://spirit-machine.herokuapp.com/wallet/' + nfcData)
         .then(jsonData => {
-            console.log(jsonData);
             res.json(jsonData.data);
             //res.json({money: out.stdout})
         })

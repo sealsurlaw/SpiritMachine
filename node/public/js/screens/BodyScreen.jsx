@@ -96,7 +96,7 @@ class BodyScreen extends React.Component {
             const cocktailBox = cocktails.map((currCocktail, index) => {
                 if (selectedAlcohol == index) {
                     return (
-                        <div className="bg-dark h1 col-sm text-center pt-2 pb-2 m-0 rounded-bottom border border-top-0" key={index}>
+                        <div className="bg-dark h1 col-sm text-center pt-2 pb-2 m-0 rounded-bottom" key={index}>
                             <a href="#" onClick={(e) => this.alcoholSelectorHandler(index, e)} className="link text-white">
                                 {currCocktail.alcohol}
                             </a>
@@ -115,31 +115,38 @@ class BodyScreen extends React.Component {
             });
 
             const cocktailSelection = cocktail.map((currCocktail, index) => {
+                const element =
+                    <div className="alcohol col-sm align-self-end" key={index}>
+                        <Alcohol
+                            cocktail={cocktail[index]}
+                            app={app} />
+                    </div>;
+
                 if (cocktail[index] != null &&
                     index >= selectionPtr &&
+                    index < selectionPtr + 4 &&
+                    index != cocktail.length - 1) {
+                    return element;
+                }
+                else if (index == cocktail.length -1 &&
+                    index >= selectionPtr &&
                     index < selectionPtr + 4) {
+                    let elements = [element, null, null, null];
+                    for (let i = 1; i < (cocktail.length % 4) + 1; ++i) {
+                        elements[i] =
+                            <div className="alcohol col-sm" key={index + i}>
+                                {/* Empty */}
+                            </div>;
+                    }
                     return (
-                        <div className="alcohol col-sm align-self-end" key={index}>
-                            <Alcohol
-                                cocktail={cocktail[index]}
-                                app={app} />
-                        </div>
+                        <React.Fragment key={1492}>
+                            {elements[0]}
+                            {elements[1]}
+                            {elements[2]}
+                            {elements[3]}
+                        </React.Fragment>
                     );
                 }
-
-                //TODO Pad the end of the array with additional components
-                // to equal 4 across
-                //
-                // if (index == this.state.cocktail.length - 1 &&
-                //     index >= this.state.selectionPtr &&
-                //     index < this.state.selectionPtr + 4) {
-                //     for (let i = index; (i < this.state.selectionPtr + 4); ++i)
-                //         return (
-                //             <div className="alcohol col-sm" key={index}>
-                //                 {/* Empty */}
-                //             </div>
-                //         );
-                // }
             });
 
             return (
