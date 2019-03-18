@@ -9,7 +9,6 @@ router.get('/:machine', function (req, res, next) {
     // Get wallet balance from database
     axios.get('https://spirit-machine.herokuapp.com/cocktails/' + machine)
         .then(jsonData => {
-            console.log(jsonData);
             res.json(jsonData.data);
         })
         .catch(err => {

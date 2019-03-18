@@ -1,7 +1,7 @@
 .alcohol-container {
     width: 100%;
-    margin: 0;
-    padding: 25px;
+    /* margin: 0; */
+    /* padding: 25px; */
     /* background-color: lightblue; */
     background-color: white;
     /* border: 1px;
@@ -10,14 +10,14 @@
 }
 
 .alcohol-filter {
-    border-style: solid;
+    /* border-style: solid;
     border-color: black;
     border-width: 2px;
     border-right : 0;
     margin-top: -25px;
     margin-right: -10px;
     margin-left: -10px;
-    margin-bottom: 25px;
+    margin-bottom: 25px; */
 
     font-size: 50px;
 
@@ -42,6 +42,25 @@
 
 .chevron-right {
     float: right;
+}
+
+.cocktail-image {
+    height: 200px;
+    width: 200px;
+}
+
+.cocktail-name {
+    height: 2rem;
+}
+
+.confirm-text {
+    font-size: 50px;
+}
+
+.confirm-container {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
 }
 
 .get-box {
@@ -78,10 +97,6 @@
 
 .loading {
     font-size: 100px;
-}
-
-.text-center {
-    text-align: center;
 }
 
 .name {

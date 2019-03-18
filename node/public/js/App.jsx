@@ -33,6 +33,7 @@ class App extends React.Component {
       money: 0,
       machine: 1,
       number: 0,
+      selectedCocktail: null,
     }
   }
 

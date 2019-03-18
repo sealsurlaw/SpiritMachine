@@ -1,24 +1,29 @@
 class AppFlow extends React.Component {
     render() {
+        let { app } = this.props;
         let screen;
+
         switch (this.props.number) {
             case 0:
-                screen = <TapCardScreen app={this.props.app} />
+                screen = <TapCardScreen app={app} />
                 break;
             case 1:
-                screen = <RetrievingDataScreen app={this.props.app} />
+                screen = <RetrievingDataScreen app={app} />
                 break;
             case 2:
-                screen = <BodyScreen app={this.props.app} />
+                screen = <BodyScreen app={app} />
                 break;
             case 3:
-                screen = <GetDrinkScreen app={this.props.app} />
+                screen = <ConfirmScreen app={app} />
+                break;
+            case 4:
+                screen = <GetDrinkScreen app={app} />
                 break;
         }
 
         return (
             <div>
-                <Navbar money={this.props.money} />
+                <Navbar app={app} />
                 {screen}
             </div>
         );
