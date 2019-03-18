@@ -116,7 +116,7 @@ class BodyScreen extends React.Component {
 
             const cocktailSelection = cocktail.map((currCocktail, index) => {
                 const element =
-                    <div className="alcohol col-sm align-self-end" key={index}>
+                    <div className="alcohol col-sm align-self-end" key={cocktail[index].name}>
                         <Alcohol
                             cocktail={cocktail[index]}
                             app={app} />
@@ -128,13 +128,16 @@ class BodyScreen extends React.Component {
                     index != cocktail.length - 1) {
                     return element;
                 }
-                else if (index == cocktail.length -1 &&
+                else if (index == cocktail.length - 1 &&
                     index >= selectionPtr &&
                     index < selectionPtr + 4) {
                     let elements = [element, null, null, null];
-                    for (let i = 1; i < (cocktail.length % 4) + 1; ++i) {
+                    for (let i = 1;
+                        (i < (4 - (cocktail.length % 4)) + 1) &&
+                        (cocktail.length % 4 != 0);
+                        ++i) {
                         elements[i] =
-                            <div className="alcohol col-sm" key={index + i}>
+                            <div className="alcohol col-sm" key={Math.random()}>
                                 {/* Empty */}
                             </div>;
                     }
@@ -186,32 +189,8 @@ class Alcohol extends React.Component {
         }
     }
 
-    componentDidUpdate() {
-        let { image } = this.props.cocktail;
-
-        // Force images to update
-        if (this.state.image != image &&
-            image != null) {
-
-            this.setState({
-                image: image,
-            });
-
-        }
-        if (image == null &&
-            this.state.image != '/images/noimage.png') {
-
-            this.setState({
-                image: '/images/noimage.png',
-            })
-
-        }
-    }
-
     selectHandler = () => {
         let { app, cocktail } = this.props;
-        let { name, price } = this.props.cocktail;
-        let { image } = this.state;
 
         console.log(this.props.cocktail);
 
