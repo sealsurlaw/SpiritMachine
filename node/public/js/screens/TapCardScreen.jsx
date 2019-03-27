@@ -15,10 +15,13 @@ class TapCardScreen extends React.Component {
         //         }
         //     );
 
-        this.props.app.setState({
-            nfcData: 'e1586f7d88f8bc5d3d077e223eb4e19f361673a4ce459d9943e85ea8d5a2e217906f',
-            number: 1
-        });
+        setTimeout(() => {
+            this.props.app.setState({
+                nfcData: 'e1586f7d88f8bc5d3d077e223eb4e19f361673a4ce459d9943e85ea8d5a2e217906f',
+                number: 1
+            });
+        }, 5000);
+
     }
 
     tappedHandler(app) {
