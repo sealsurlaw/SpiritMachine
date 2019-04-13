@@ -11,10 +11,14 @@ class GetDrinkScreen extends React.Component {
         fetch('/pour/alcohol/' + this.props.app.state.selectedCocktail.alcohol.container)
             .then(res => res.json())
             .then(result => {
+                // this.setState({
+                //     pourType: "MIXER",
+                // });
+                // this.pourMixer();
                 this.setState({
-                    pourType: "MIXER",
+                    pourType: "DONE",
                 });
-                this.pourMixer();
+                setTimeout(() => this.props.app.setState({ number: 0 }), 5000);
             });
     }
 
