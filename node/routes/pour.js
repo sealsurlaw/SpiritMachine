@@ -9,18 +9,18 @@ router.get('/alcohol/:number', function (req, res, next) {
     var number = req.params.number;
 
     // Run python script to pour alcohol
-    // shell('sudo python3 ../pourAlcohol.py ' + number)
-    //     .then(out => {
-    //         console.log(out);
-    //         res.send(out);
-    //     })
-    //     .catch(err => {
-    //         console.log(err);
-    //         res.send(err);
-    //     });
+    shell('sudo python /home/pi/Programming/SpiritMachine/python/old/flow2.py')
+        .then(out => {
+            console.log(out);
+            res.send(out);
+        })
+        .catch(err => {
+            console.log(err);
+            res.send(err);
+        });
 
     //TEST Waste time and return something
-    setTimeout(() => res.send({ message: "Poured!" }), 2000);
+    // setTimeout(() => res.send({ message: "Poured!" }), 2000);
 
 });
 

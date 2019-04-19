@@ -1,0 +1,34 @@
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BCM)
+
+PIN1 = 4 
+PIN2 = 5
+PIN3 = 22
+PIN4 = 17
+PIN5 = 6
+PIN6 = 13
+PIN7 = 19
+PIN8 = 26
+
+GPIO.setup(PIN1 , GPIO.OUT)
+GPIO.setup(PIN2 , GPIO.OUT)
+GPIO.setup(PIN3 , GPIO.OUT)
+GPIO.setup(PIN4 , GPIO.OUT)
+
+GPIO.setup(PIN5 , GPIO.OUT)
+GPIO.setup(PIN6 , GPIO.OUT)
+GPIO.setup(PIN7 , GPIO.OUT)
+GPIO.setup(PIN8 , GPIO.OUT)
+
+GPIO.output(PIN1 , GPIO.LOW)
+GPIO.output(PIN2 , GPIO.LOW)
+GPIO.output(PIN3 , GPIO.LOW)
+GPIO.output(PIN4 , GPIO.LOW)
+
+GPIO.output(PIN5 , GPIO.LOW)
+GPIO.output(PIN6 , GPIO.LOW)
+GPIO.output(PIN7 , GPIO.LOW)
+GPIO.output(PIN8 , GPIO.LOW)
+
+GPIO.cleanup()

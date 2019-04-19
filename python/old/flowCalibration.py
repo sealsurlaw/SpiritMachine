@@ -6,14 +6,14 @@ i = 1
 timer = time.time()
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(12,GPIO.OUT)
-GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP) 
+GPIO.setup(6, GPIO.IN, pull_up_down=GPIO.PUD_UP) 
 def my_callback(channel):  
     global i
     global timer
     print(i) 
     print(time.time()-timer)
     i = i + 1
-GPIO.add_event_detect(18, GPIO.FALLING, callback=my_callback) 
+GPIO.add_event_detect(6, GPIO.FALLING, callback=my_callback) 
 
 
 GPIO.output(12, GPIO.HIGH)

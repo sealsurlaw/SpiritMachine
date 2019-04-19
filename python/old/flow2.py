@@ -2,26 +2,29 @@
 import RPi.GPIO as GPIO
 import time
 
+Sol = 6
+Flow = 12
+
 i = 0
 GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(6,GPIO.OUT)
-GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_UP) 
+GPIO.setup(Sol,GPIO.OUT)
+GPIO.setup(Flow, GPIO.IN, pull_up_down=GPIO.PUD_UP) 
 
 def my_callback(channel):  
     global i
     i = i + 1
 
-GPIO.add_event_detect(16, GPIO.FALLING, callback=my_callback) 
+GPIO.add_event_detect(Flow, GPIO.FALLING, callback=my_callback) 
 
-GPIO.output(6, GPIO.HIGH)
+GPIO.output(Sol, GPIO.HIGH)
 
-#while i < 23000000:
-#   print(i) 
+while i < 19:
+   print(i) 
 
-time.sleep(5)
+#time.sleep(5)
 
-GPIO.output(6, GPIO.LOW)
+GPIO.output(Sol, GPIO.LOW)
 
 
 GPIO.cleanup()
