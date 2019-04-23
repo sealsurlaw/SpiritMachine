@@ -3,7 +3,7 @@ class App extends React.Component {
     super(props)
     this.state = {
       money: 0,
-      machine: 1,
+      machine: 2,
       number: 0,
       selectedCocktail: null,
     }

@@ -20,9 +20,7 @@ GPIO.add_event_detect(Flow, GPIO.FALLING, callback=my_callback)
 GPIO.output(Sol, GPIO.HIGH)
 
 while i < 19:
-   print(i) 
-
-#time.sleep(5)
+   pass
 
 GPIO.output(Sol, GPIO.LOW)
 

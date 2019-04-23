@@ -3,23 +3,30 @@ class GetDrinkScreen extends React.Component {
         super(props);
 
         this.state = {
-            pourType: "ALCOHOL"
+            pourType: "PLACE_CUP"
         }
     }
 
-    componentWillMount() {
+    cupHandler = () => {
+        this.setState({
+            pourType: "ALCOHOL",
+        })
+        this.pourAlcohol();
+    }
+
+    pourAlcohol() {
+        console.log(this.props.app.state.selectedCocktail.alcohol.container);
         fetch('/pour/alcohol/' + this.props.app.state.selectedCocktail.alcohol.container)
             .then(res => res.json())
             .then(result => {
-                // this.setState({
-                //     pourType: "MIXER",
-                // });
-                // this.pourMixer();
                 this.setState({
-                    pourType: "DONE",
+                    pourType: "MIXER",
                 });
-                setTimeout(() => this.props.app.setState({ number: 0 }), 5000);
-            });
+            })
+            .catch(err => {
+                console.log(err);
+            })
+        this.pourMixer();
     }
 
     pourMixer() {
@@ -29,7 +36,7 @@ class GetDrinkScreen extends React.Component {
                 this.setState({
                     pourType: "DONE",
                 });
-                setTimeout(() => this.props.app.setState({ number: 0 }), 5000);
+                setTimeout(() => this.props.app.setState({ number: 0, money: 0 }), 5000);
             });
     }
 
@@ -47,7 +54,10 @@ class GetDrinkScreen extends React.Component {
             image = '/images/noimage.png';
         }
 
-        if (this.state.pourType == 'ALCOHOL') {
+        if (this.state.pourType == 'PLACE_CUP') {
+            pouringMessage = 'Please place your cup in the machine.';
+        }
+        else if (this.state.pourType == 'ALCOHOL') {
             pouringMessage = 'Please wait. Dispensing a shot of ' + alcohol.name + '...';
         }
         else if (this.state.pourType == 'MIXER') {
@@ -63,6 +73,14 @@ class GetDrinkScreen extends React.Component {
                 <div className="row">
                     <div className="col-sm">
                         <img src='/images/loading.gif' alt="Loading" className="image-center mt-2" />
+                    </div>
+                </div>
+        }
+        else if (this.state.pourType == 'PLACE_CUP') {
+            loadingGif =
+                <div className="row">
+                    <div className="col-sm">
+                        <button type="button" onClick={this.cupHandler} className="btn btn-success btn-lg btn-block my-3">Ready!</button>
                     </div>
                 </div>
         }

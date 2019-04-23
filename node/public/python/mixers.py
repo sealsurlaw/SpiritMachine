@@ -15,7 +15,7 @@ GPIO.setup(pin, GPIO.OUT)
 
 GPIO.output(pin, GPIO.HIGH)
 
-time.sleep(5)
+time.sleep(2.5)
 
 GPIO.output(pin, GPIO.LOW)
 

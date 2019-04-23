@@ -15,7 +15,7 @@ router.get('/card', function (req, res, next) {
             var nfcData = out.stdout;
             nfcData = hex64.decode(nfcData);
 
-            res.json({data: nfcData});
+            res.json({ data: nfcData });
         })
         .catch(err => {
             console.log(err);
@@ -29,7 +29,7 @@ router.get('/money/:nfcData', function (req, res, next) {
     var nfcData = req.params.nfcData;
 
     // Get wallet balance from database
-    axios.post('https://spirit-machine.herokuapp.com/wallet/' + nfcData)
+    axios.post('http://www.spirit-machine.com/api/wallet/' + nfcData)
         .then(jsonData => {
             res.json(jsonData.data);
             //res.json({money: out.stdout})
