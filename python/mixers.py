@@ -3,11 +3,11 @@ import sys
 import time
 import RPi.GPIO as GPIO
 
-MIXER = sys.argv[1]
+MIXER = int(sys.argv[1])
 
 GPIO.setmode(GPIO.BCM)
 
-pins = [4, 5, 7, 17]
+pins = [4, 5, 22, 17]
 
 pin = pins[MIXER]
 
@@ -15,7 +15,7 @@ GPIO.setup(pin, GPIO.OUT)
 
 GPIO.output(pin, GPIO.HIGH)
 
-time.sleep(5)
+time.sleep(4.5)
 
 GPIO.output(pin, GPIO.LOW)
 

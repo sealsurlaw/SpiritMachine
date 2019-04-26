@@ -22,11 +22,11 @@ class GetDrinkScreen extends React.Component {
                 this.setState({
                     pourType: "MIXER",
                 });
+                this.pourMixer();
             })
             .catch(err => {
                 console.log(err);
             })
-        this.pourMixer();
     }
 
     pourMixer() {

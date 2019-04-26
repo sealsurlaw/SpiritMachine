@@ -12,8 +12,8 @@ router.get('/card', function (req, res, next) {
         //shell('echo NFC has been disabled')
         .then(out => {
 
-            let nfcData = out.stdout;
-            nfcData = hex64.decode(nfcData);
+            var nfcData = out.stdout;
+            //nfcData = hex64.decode(nfcData);
 
             res.json({ data: nfcData });
         })
