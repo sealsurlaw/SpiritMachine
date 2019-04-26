@@ -1,7 +1,7 @@
 class RetrievingDataScreen extends React.Component {
     componentDidMount() {
         console.log(this.props.app.state.nfcData);
-        fetch("/api/nfc/money/" + this.props.app.state.nfcData)
+        fetch(`/api/wallet/${this.props.app.state.nfcData}`)
             .then(res => res.json())
             .then(
                 (result) => {

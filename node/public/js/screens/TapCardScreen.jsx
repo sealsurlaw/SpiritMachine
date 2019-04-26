@@ -1,6 +1,6 @@
 class TapCardScreen extends React.Component {
     componentWillMount() {
-        // fetch("/api/nfc/card")
+        // fetch("/api/wallet/card")
         //     .then(res => res.json())
         //     .then(
         //         (result) => {
@@ -17,7 +17,7 @@ class TapCardScreen extends React.Component {
 
         setTimeout(() => {
             this.props.app.setState({
-                nfcData: 'e1586f7d88f8bc5d3d077e223eb4e19f361673a4ce459d9943e85ea8d5a2e217906f',
+                nfcData: '6c2ea83f7bf822609781dc7501514b156ae60647',
                 number: 1
             });
         }, 1000);

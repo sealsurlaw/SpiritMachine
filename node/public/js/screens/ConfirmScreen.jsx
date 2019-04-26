@@ -9,18 +9,40 @@ class ConfirmScreen extends React.Component {
 
     confirmHandler = () => {
         let { app } = this.props;
+        let { price } = app.state.selectedCocktail;
+        let { money, nfcData } = app.state;
 
-        app.setState({
-            number: 4,
-        })
+        const newBalance = money - price;
+
+        fetch(`/api/wallet/${nfcData}/${newBalance}`)
+            .then(res => res.json())
+            .then(() => {
+                this.props.app.setState({
+                    money: money - price,
+                })
+                app.setState({
+                    number: 4,
+                })
+            },
+                (error) => {
+                    console.log(error)
+                }
+            );
     }
 
     render() {
         let { name, image, price } = this.props.app.state.selectedCocktail;
         let { money } = this.props.app.state;
+        let warningMessage = <div className="row"><div className="col-sm text-center h1 text-danger">You don't have enough money</div></div>
+        let confirmButton = <button type="button" className="btn btn-outline-secondary btn-lg btn-block">Confirm</button>
 
         if (this.props.app.state.selectedCocktail.image == null) {
             image = '/images/noimage.png';
+        }
+
+        if (money - price >= 0) {
+            warningMessage = null
+            confirmButton = <button type="button" onClick={() => this.confirmHandler()} className="btn btn-success btn-lg btn-block">Confirm</button>
         }
 
         return (
@@ -46,12 +68,13 @@ class ConfirmScreen extends React.Component {
                     <div className="col-sm text-right h2 pr-2 font-weight-bold">Remaining:</div>
                     <div className="col-sm text-left h2 pl-2">${(money - price).toFixed(2)}</div>
                 </div>
+                {warningMessage}
                 <div className="row mt-2">
                     <div className="col-sm">
                         <button type="button" onClick={() => this.backHandler()} className="btn btn-secondary btn-lg btn-block">Back</button>
                     </div>
                     <div className="col-sm">
-                        <button type="button" onClick={() => this.confirmHandler()} className="btn btn-success btn-lg btn-block">Confirm</button>
+                        {confirmButton}
                     </div>
                 </div>
             </div>
