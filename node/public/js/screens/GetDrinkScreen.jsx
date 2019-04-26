@@ -30,7 +30,9 @@ class GetDrinkScreen extends React.Component {
     }
 
     pourMixer() {
-        fetch('/pour/mixer/' + this.props.app.state.selectedCocktail.mixer.container)
+        let { container, time} = this.props.app.state.selectedCocktail.mixer;
+
+        fetch(`/pour/mixer/${container}/${time}`)
             .then(res => res.json())
             .then(result => {
                 this.setState({

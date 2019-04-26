@@ -40,7 +40,7 @@ router.get('/:nfcData', function (req, res, next) {
 });
 
 router.get('/:token/:newBalance', (req, res) => {
-    let token = req.params.token;
+    let token = req.params.token.trim();
     let newBalance = req.params.newBalance;
 
     // Update wallet balance
