@@ -22,10 +22,11 @@ router.get('/alcohol/:number', function (req, res, next) {
 });
 
 // Pour Mixer
-router.get('/mixer/:number', function (req, res, next) {
+router.get('/mixer/:number/:time', function (req, res, next) {
     let number = req.params.number;
-    let time;
+    let time = req.params.time;
 
+    /*
     switch (parseInt(number)) {
         case 0:
             time = 5.0;
@@ -42,6 +43,7 @@ router.get('/mixer/:number', function (req, res, next) {
         default:
             time = 5.0;
     }
+    */
 
     // Run python script to pour alcohol
     shell(`python ~/Programming/SpiritMachine/python/mixers.py ${number} ${time}`)

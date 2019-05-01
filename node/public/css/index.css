@@ -8,6 +8,10 @@
     background-color: white;
 } */
 
+html {
+    cursor: none;
+}
+
 html, body {
     height: 100%;
 }
