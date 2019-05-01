@@ -6,6 +6,7 @@ var logger = require('morgan');
 var nfcRouter = require('./routes/nfc');
 var machineRouter = require('./routes/machine');
 var pourRouter = require('./routes/pour');
+var checkRouter = require('./routes/checkLevel');
 
 var app = express();
 
@@ -18,5 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/wallet', nfcRouter);
 app.use('/api/machine', machineRouter);
 app.use('/pour', pourRouter);
+app.use('/check', checkRouter);
 
 module.exports = app;

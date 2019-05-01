@@ -15,7 +15,7 @@ isClosed2 = GPIO.input(pins[1])
 isClosed3 = GPIO.input(pins[2])
 isClosed4 = GPIO.input(pins[3])
 
-print("{}, {}, {}, {}".format(isClosed1, isClosed2, isClosed3, isClosed4))
+print("{},{},{},{}".format(isClosed1, isClosed2, isClosed3, isClosed4))
 
 GPIO.cleanup()
 

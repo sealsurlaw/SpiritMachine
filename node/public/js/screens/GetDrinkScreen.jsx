@@ -36,6 +36,13 @@ class GetDrinkScreen extends React.Component {
                 this.setState({
                     pourType: "DONE",
                 });
+                fetch('/check/e7234b54fb42fc899bdf7397b3579eebe9dfcf1d/2')
+                    .then(() => {
+                        console.log('Notified of status');
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    })
                 setTimeout(() => this.props.app.setState({ number: 0, money: 0 }), 5000);
             });
     }
