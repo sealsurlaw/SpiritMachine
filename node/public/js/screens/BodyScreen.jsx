@@ -105,8 +105,8 @@ class BodyScreen extends React.Component {
                 }
                 else if (currCocktail.empty === true) {
                     return (
-                        <div className="bg-light h1 col-sm text-center pt-2 pb-2 m-0 rounded-bottom border border-top-0" key={index}>
-                            <a href="#" onClick={(e) => console.log('Clicked')} className="link text-muted">
+                        <div className="bg-secondary h1 col-sm text-center pt-2 pb-2 m-0 rounded-bottom border border-top-0" key={index}>
+                            <a href="#" onClick={(e) => console.log('Clicked')} className="link text-danger">
                                 {currCocktail.alcohol}
                             </a>
                         </div>
