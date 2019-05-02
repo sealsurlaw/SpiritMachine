@@ -56,11 +56,11 @@ class TapCardScreen extends React.Component {
                         <img src="images/nfc.gif" className="image-center" />
                     </div>
                 </div >
-                <div className="row">
+                {/* <div className="row">
                     <div className="col-sm align-self-center">
                         <button type="button" onClick={() => this.refreshHandler()} className="btn btn-secondary btn-lg btn-block">Tap</button>
                     </div>
-                </div >
+                </div > */}
             </div>
         );
     }
