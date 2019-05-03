@@ -19,9 +19,17 @@ class BodyScreen extends React.Component {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
+
+                let i;
+                for (i = 0; i < 4; ++i) {
+                    if (result[i].empty == false)
+                        break;
+                }
+
                 this.setState({
                     cocktails: result,
-                    cocktail: result[0].cocktails,
+                    cocktail: result[i].cocktails,
+                    selectedAlcohol: i,
                 })
             })
             .catch(error => {
